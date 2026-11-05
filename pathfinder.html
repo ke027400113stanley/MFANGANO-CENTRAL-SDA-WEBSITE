@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pathfinders Ministry | Mfangano Central SDA</title>
+<script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=m72Gcz87Jqd9Q5o-_07jSwqWQiq0Iq8batFWJJqef6JpXgsI1Rc6Idk3uWwpcUj_-012wBQXTYYhLJ9lj11YuKHrf6WefOwN5RbG2-clNlPdDaIVYlP_Zc7DaJYZ9zHIRkyUKqJX89Mk3Xic8JzUV9VJqQ6pCE7gT6-B0cCccigj9a4bfUjooJsIFsr1wz83RZC0lnN07u25W3wHg_emeuiFrwgFaLs796UndhrkQn-DhRepOITS-Wd7_jxYJAwGMEYcVQOfao0IcrOAn5EumDQc1PccbrU47oqUhqWj2YRBBAIioNdDYUBnW4IWBROACmcmOMqmV0X86pjUfvddJnuav5_T_01SVY5iHuzJQ7r8qXmJm2O3M-OnPmVeM7y-3TSg0_UMqcK99F2yF3DFWolGJvYto-J_bCIekeATjdremm0dZ6_9Vlbqtyg3TCV3ihdN5Sw7azgLkPq7BSMBrRr3S_kZEhAKTorHjnw693E08lXahCiDoLeiAGqb8Qtv-Z4AprPASC3Zd2PeMVlQvPqYnEL0AbY0C5DJLVIjRM9G3F_ZRya9olLqhaYxh0P_8uAZt4QqbSqCbtie6fI3iv9VlMgPnLCHBzKb7er7OOs4yZUGHGeuAo8Coc3FA3sNnP8PMe7J1vpyqaJNbqMb4LvaZxxW4oO8Y8UZTlc8CvpcDxZFxxgaj7FStzE0wHLguGiKUXgdSn6u7T86cV588AGfnCa36-whr9cQ2Z-1xofSHWHaQSXbAlQUwOJcfnAeJGu7zi7udfIugQw8LMc35lunlQL74uMmXGOmX4RLZMdAPttE2xEMMUTrX1KF9MQDEfNbYRSsm4BPLJbs82K3twBPxuPSns2asAb-nEjbM9A84M8SYL1q_9j4xP1r1uArMtcbL7aQ4S0SMniqJ1Jiw2YhXY0xtYFvlGAGlA2-b2b82qb2a4OEvXtSRL11Pl4WSdK8wwBlROz-qzzBLLMVS9SZ0ozV7q2VKhXswShkT-CE9KdHNHhW8bvKpurG-7fl7QWHg5fk-JpReknjoOY2KB4qFUQ9VwW2YW2_OIkUf6XWfpaV9mNA-m6TPDifICLEIR4x5kc15oAKjSSh9gA9Muk-zbV60Qw4m-JLxs-aPA3D30soiUHt06_rCBenE2ZFIsuPUEL98VY-wHiJZg99T8TyFs5Tf7CHB8AY86fJrXQpahdfYIzOaE1QTG_AemV47IFDQF05GtNl3cNyrycUhOzbjwPbGZJU5tT9SExU-bMP3z_4iOgqXhXvJb_KRAPngavsgrKrSQZt9uewz3Z8XCFjX2YiwxSNeRPJsXFUwiOrI4JRY2oVEqthDgcdMztI3eREcad5vMK1EghlOlLdt2rgPxDk-awixrCghGlUrpZrUmfCkiiH1G9sJ-uLu9NY68APsemvDmLPJFrUPpz29II06K7uvzDDTVOOIPK1G1nDXLEiW7LSArgf5sXP-zBn-fX0xT3-CXkd-PBJl2XkuXJ7LC2JWSB3buExIM-Ok_SPM-SrmAH7bajA_xmM8xT2vT-pA6UtX-9yET0TrOKB0493_RcxzaY34obZi5CtpkMkx_iWvJNajmBamVHT-7GnlEle8sf5WI-1jeqCi_TlRO9l5sAfYO5XRaxBb1kl_-CwJacWPpGO8PHx_bw7a0C8Z_vNo-U8CsY8Qnaz02WWvXLJ3d1pIn7hZrnml4KgnXhvsOmHM_5qTRjruDM-iCXF" nonce="133f66c3af270bbebab676c56d775e22" charset="UTF-8"></script><style>
+  * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Trebuchet MS', sans-serif; }
+  html { scroll-behavior: smooth; }
+  body { background: #f4f6f9; color: #333; overflow-x: hidden; }
+
+  /* NAVIGATION */
+  header {
+    background: rgba(30, 60, 114, 0.95); padding: 15px 30px;
+    position: fixed; top: 0; width: 100%; z-index: 1000;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.2); backdrop-filter: blur(10px);
+  }
+  nav {
+    display: flex; justify-content: space-between; align-items: center;
+    max-width: 1300px; margin: auto; flex-wrap: wrap;
+  }
+  .logo { color: #ffd700; font-size: 1.5rem; font-weight: bold; letter-spacing: 1px; }
+  .logo span { color: white; }
+  .nav-links { list-style: none; display: flex; gap: 20px; flex-wrap: wrap; }
+  .nav-links a {
+    color: white; text-decoration: none; padding: 8px 16px; border-radius: 25px;
+    transition: all 0.3s; font-weight: 600; font-size: 0.95rem;
+  }
+  .nav-links a:hover { background: #ffd700; color: #1e3c72; transform: translateY(-2px); }
+  .nav-links a.active { background: #ffd700; color: #1e3c72; }
+
+  /* HERO SECTION */
+  .hero {
+    height: 100vh; background: linear-gradient(rgba(30,60,114,0.7), rgba(30,60,114,0.85)),
+      url('https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?w=1600') center/cover fixed;
+    display: flex; align-items: center; justify-content: center; text-align: center;
+    color: white; position: relative; padding: 0 20px;
+  }
+  .hero-content { max-width: 900px; animation: fadeUp 1.2s ease-out; }
+  .hero .badge {
+    display: inline-block; background: #ffd700; color: #1e3c72;
+    padding: 8px 20px; border-radius: 30px; font-weight: bold;
+    margin-bottom: 20px; letter-spacing: 2px; font-size: 0.9rem;
+  }
+  .hero h1 { font-size: 4rem; margin-bottom: 20px; text-shadow: 3px 3px 6px rgba(0,0,0,0.5); }
+  .hero h1 span { color: #ffd700; }
+  .hero p { font-size: 1.3rem; margin-bottom: 30px; line-height: 1.8; }
+  .hero-btns { display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; }
+  .btn {
+    padding: 14px 35px; border-radius: 30px; text-decoration: none;
+    font-weight: bold; transition: all 0.3s; border: none; cursor: pointer;
+    font-size: 1rem; display: inline-block;
+  }
+  .btn-primary { background: #ffd700; color: #1e3c72; }
+  .btn-primary:hover { background: white; transform: translateY(-3px); box-shadow: 0 10px 25px rgba(0,0,0,0.3); }
+  .btn-outline { background: transparent; color: white; border: 2px solid white; }
+  .btn-outline:hover { background: white; color: #1e3c72; }
+
+  /* SCROLL INDICATOR */
+  .scroll-down {
+    position: absolute; bottom: 30px; left: 50%; transform: translateX(-50%);
+    color: white; font-size: 2rem; animation: bounce 2s infinite;
+  }
+
+  /* SECTIONS */
+  section { padding: 80px 20px; }
+  .container { max-width: 1200px; margin: auto; }
+  .section-title {
+    text-align: center; font-size: 2.5rem; color: #1e3c72;
+    margin-bottom: 15px; position: relative;
+  }
+  .section-title::after {
+    content: ''; display: block; width: 80px; height: 4px;
+    background: #ffd700; margin: 15px auto; border-radius: 2px;
+  }
+  .section-subtitle {
+    text-align: center; color: #666; font-size: 1.1rem;
+    max-width: 700px; margin: 0 auto 50px;
+  }
+
+  /* VISION & MISSION */
+  .vm-section { background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%); color: white; }
+  .vm-section .section-title { color: white; }
+  .vm-section .section-subtitle { color: #e0e0e0; }
+  .vm-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px; margin-top: 40px;
+  }
+  .vm-card {
+    background: rgba(255,255,255,0.1); padding: 40px 30px; border-radius: 15px;
+    backdrop-filter: blur(10px); border: 1px solid rgba(255,215,0,0.3);
+    transition: all 0.4s; text-align: center;
+  }
+  .vm-card:hover {
+    transform: translateY(-10px); background: rgba(255,215,0,0.15);
+    border-color: #ffd700;
+  }
+  .vm-card .icon {
+    font-size: 3.5rem; margin-bottom: 20px; display: inline-block;
+    animation: float 3s ease-in-out infinite;
+  }
+  .vm-card h3 { color: #ffd700; font-size: 1.6rem; margin-bottom: 15px; }
+  .vm-card p { line-height: 1.8; font-size: 1.05rem; }
+
+  /* YEAR THEME */
+  .theme-section {
+    background: url('https://images.unsplash.com/photo-1519681393784-d120267933ba?w=1600') center/cover fixed;
+    position: relative; text-align: center; color: white;
+  }
+  .theme-section::before {
+    content: ''; position: absolute; inset: 0;
+    background: linear-gradient(135deg, rgba(30,60,114,0.9), rgba(255,215,0,0.7));
+  }
+  .theme-content { position: relative; z-index: 2; max-width: 800px; margin: auto; }
+  .theme-year {
+    font-size: 6rem; font-weight: bold; color: #ffd700;
+    text-shadow: 3px 3px 10px rgba(0,0,0,0.5); margin-bottom: 10px;
+  }
+  .theme-title { font-size: 2.5rem; margin-bottom: 20px; }
+  .theme-verse {
+    font-style: italic; font-size: 1.2rem; margin-top: 20px;
+    padding: 20px; border-left: 4px solid #ffd700; background: rgba(0,0,0,0.3);
+    border-radius: 5px; display: inline-block;
+  }
+
+  /* IMAGE GALLERY */
+  .gallery-grid {
+    display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+  }
+  .gallery-item {
+    position: relative; overflow: hidden; border-radius: 15px;
+    height: 280px; cursor: pointer; box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+    transition: transform 0.4s;
+  }
+  .gallery-item:hover { transform: scale(1.03); }
+  .gallery-item img {
+    width: 100%; height: 100%; object-fit: cover;
+    transition: transform 0.6s;
+  }
+  .gallery-item:hover img { transform: scale(1.15); }
+  .gallery-overlay {
+    position: absolute; inset: 0; background: linear-gradient(to top, rgba(30,60,114,0.95), transparent);
+    display: flex; align-items: flex-end; padding: 20px; color: white;
+    opacity: 0; transition: opacity 0.4s;
+  }
+  .gallery-item:hover .gallery-overlay { opacity: 1; }
+  .gallery-overlay h3 { color: #ffd700; margin-bottom: 5px; }
+
+  /* LIGHTBOX */
+  .lightbox {
+    display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.95);
+    z-index: 2000; align-items: center; justify-content: center; padding: 20px;
+  }
+  .lightbox.active { display: flex; }
+  .lightbox img { max-width: 90%; max-height: 85vh; border-radius: 10px; }
+  .lightbox-close {
+    position: absolute; top: 20px; right: 30px; color: white;
+    font-size: 3rem; cursor: pointer; background: none; border: none;
+  }
+  .lightbox-caption {
+    position: absolute; bottom: 30px; left: 50%; transform: translateX(-50%);
+    color: white; font-size: 1.2rem; text-align: center;
+  }
+
+  /* PLEDGE & LAW */
+  .pledge-section { background: #f4f6f9; }
+  .pledge-tabs {
+    display: flex; justify-content: center; gap: 15px; margin-bottom: 30px; flex-wrap: wrap;
+  }
+  .tab-btn {
+    padding: 12px 30px; background: white; border: 2px solid #1e3c72;
+    color: #1e3c72; border-radius: 30px; cursor: pointer; font-weight: bold;
+    transition: all 0.3s;
+  }
+  .tab-btn.active { background: #1e3c72; color: #ffd700; }
+  .tab-content { display: none; animation: fadeUp 0.5s; }
+  .tab-content.active { display: block; }
+  .pledge-box {
+    background: white; padding: 40px; border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1); max-width: 800px; margin: auto;
+    border-top: 5px solid #ffd700;
+  }
+  .pledge-box h3 { color: #1e3c72; margin-bottom: 20px; font-size: 1.8rem; text-align: center; }
+  .pledge-text { font-size: 1.15rem; line-height: 2; color: #444; }
+  .pledge-text p { margin-bottom: 10px; padding-left: 15px; border-left: 3px solid #ffd700; }
+
+  /* ACTIVITIES */
+  .activities-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 25px;
+  }
+  .activity-card {
+    background: white; padding: 30px; border-radius: 15px; text-align: center;
+    transition: all 0.4s; cursor: pointer; box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    border-bottom: 4px solid transparent;
+  }
+  .activity-card:hover {
+    transform: translateY(-10px); border-bottom-color: #ffd700;
+    box-shadow: 0 15px 35px rgba(30,60,114,0.2);
+  }
+  .activity-card .icon {
+    font-size: 3.5rem; margin-bottom: 15px; display: inline-block;
+    transition: transform 0.4s;
+  }
+  .activity-card:hover .icon { transform: rotate(10deg) scale(1.2); }
+  .activity-card h3 { color: #1e3c72; margin-bottom: 10px; }
+
+  /* COUNTDOWN */
+  .countdown-section {
+    background: linear-gradient(135deg, #ffd700 0%, #ffed4e 100%);
+    text-align: center; color: #1e3c72;
+  }
+  .countdown-section h2 { color: #1e3c72; }
+  .countdown-grid {
+    display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-top: 30px;
+  }
+  .countdown-box {
+    background: #1e3c72; color: white; padding: 25px 30px; border-radius: 15px;
+    min-width: 120px; box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  }
+  .countdown-box .number { font-size: 3rem; font-weight: bold; color: #ffd700; }
+  .countdown-box .label { font-size: 0.9rem; text-transform: uppercase; letter-spacing: 2px; }
+
+  /* CONTACT CTA */
+  .cta-section {
+    background: linear-gradient(135deg, #1e3c72, #2a5298); color: white; text-align: center;
+  }
+  .cta-section h2 { color: white; }
+  .cta-section p { font-size: 1.2rem; max-width: 700px; margin: 20px auto 30px; }
+
+  /* FOOTER */
+  footer {
+    background: #0f1e3d; color: white; padding: 40px 20px 20px; text-align: center;
+  }
+  .footer-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px; max-width: 1100px; margin: auto; text-align: left;
+  }
+  .footer-col h4 { color: #ffd700; margin-bottom: 15px; }
+  .footer-col a { color: #ccc; text-decoration: none; display: block; padding: 5px 0; transition: color 0.3s; }
+  .footer-col a:hover { color: #ffd700; }
+  .footer-bottom {
+    margin-top: 30px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.1);
+    color: #aaa;
+  }
+
+  /* ANIMATIONS */
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+  @keyframes bounce { 0%,100% { transform: translateY(0) translateX(-50%); } 50% { transform: translateY(-15px) translateX(-50%); } }
+  @keyframes float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+
+  .reveal { opacity: 0; transform: translateY(40px); transition: all 0.8s ease-out; }
+  .reveal.active { opacity: 1; transform: translateY(0); }
+
+  /* RESPONSIVE */
+  @media (max-width: 768px) {
+    .hero h1 { font-size: 2.5rem; }
+    .theme-year { font-size: 4rem; }
+    .theme-title { font-size: 1.8rem; }
+    .section-title { font-size: 2rem; }
+    .nav-links { gap: 10px; }
+    .nav-links a { padding: 6px 12px; font-size: 0.85rem; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAVIGATION -->
+<header>
+  <nav>
+    <div class="logo">⚜️ <span>Pathfinders</span></div>
+    <ul class="nav-links">
+      <li><a href="index.html">🏠 Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#pledge">Pledge</a></li>
+      <li><a href="#activities">Activities</a></li>
+      <li><a href="contacts.html" class="active">📞 Contacts</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-content">
+    <span class="badge">⚜️ THE NOBLE ARMY ⚜️</span>
+    <h1>Mfangano Central <span>Pathfinders</span></h1>
+    <p>"To keep the Lord always in their thoughts, and to be helpful to others." <br>
+    Join the adventure of a lifetime — where faith meets fun, and service meets joy!</p>
+    <div class="hero-btns">
+      <a href="#about" class="btn btn-primary">Discover More</a>
+      <a href="contacts.html" class="btn btn-outline">Contact Us</a>
+    </div>
+  </div>
+  <div class="scroll-down">⬇</div>
+</section>
+
+<!-- VISION & MISSION -->
+<section id="about" class="vm-section">
+  <div class="container">
+    <h2 class="section-title reveal">Our Vision & Mission</h2>
+    <p class="section-subtitle reveal">Building Christ-like character in every young adventurer</p>
+    <div class="vm-grid">
+      <div class="vm-card reveal">
+        <div class="icon">👁️</div>
+        <h3>Our Vision</h3>
+        <p>To raise a generation of young people who love God, serve humanity, and shine as lights in their communities — equipped with spiritual, physical, and mental strength for life's journey.</p>
+      </div>
+      <div class="vm-card reveal">
+        <div class="icon">🎯</div>
+        <h3>Our Mission</h3>
+        <p>To lead boys and girls (ages 10–15) to Jesus through Christ-centered activities that build character, instill discipline, develop skills, and inspire a lifelong commitment to service and evangelism.</p>
+      </div>
+      <div class="vm-card reveal">
+        <div class="icon">💎</div>
+        <h3>Our Values</h3>
+        <p>Faith in God • Loyalty & Obedience • Purity & Health • Service to Others • Love for Nature • Teamwork & Discipline • Joyful Worship</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- YEAR THEME -->
+<section class="theme-section">
+  <div class="theme-content reveal">
+    <div class="theme-year">2026</div>
+    <h2 class="theme-title">"Rising Stronger in Christ"</h2>
+    <p>Our Pathfinder theme for this year calls every member to grow deeper in faith, stand firmer in character, and reach higher in service.</p>
+    <div class="theme-verse">
+      "But they that wait upon the LORD shall renew their strength; they shall mount up with wings as eagles."
+      <br><strong>— Isaiah 40:31</strong>
+    </div>
+  </div>
+</section>
+
+<!-- IMAGE GALLERY -->
+<section id="gallery">
+  <div class="container">
+    <h2 class="section-title reveal">Moments in Action</h2>
+    <p class="section-subtitle reveal">Click any image to view in full size</p>
+    <div class="gallery-grid">
+      <div class="gallery-item reveal" onclick="openLightbox(this)">
+        <img src="https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?w=600" alt="Camping">
+        <div class="gallery-overlay">
+          <div>
+            <h3>🏕️ Camporee 2025</h3>
+            <p>Annual camping adventure</p>
+          </div>
+        </div>
+      </div>
+      <div class="gallery-item reveal" onclick="openLightbox(this)">
+        <img src="https://images.unsplash.com/photo-1529156069898-49953e39b270?w=600" alt="Fellowship">
+        <div class="gallery-overlay">
+          <div>
+            <h3>🤝 Fellowship Time</h3>
+            <p>Building friendships in Christ</p>
+          </div>
+        </div>
+      </div>
+      <div class="gallery-item reveal" onclick="openLightbox(this)">
+        <img src="https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?w=600" alt="Group Activity">
+        <div class="gallery-overlay">
+          <div>
+            <h3>🎯 Team Activities</h3>
+            <p>Learning through teamwork</p>
+          </div>
+        </div>
+      </div>
+      <div class="gallery-item reveal" onclick="openLightbox(this)">
+        <img src="https://images.unsplash.com/photo-1455849318743-b2233052fcff?w=600" alt="Nature Study">
+        <div class="gallery-overlay">
+          <div>
+            <h3>🌿 Nature Exploration</h3>
+            <p>Discovering God's creation</p>
+          </div>
+        </div>
+      </div>
+      <div class="gallery-item reveal" onclick="openLightbox(this)">
+        <img src="https://images.unsplash.com/photo-1523580494863-6f3031224c94?w=600" alt="Drill">
+        <div class="gallery-overlay">
+          <div>
+            <h3>🎖️ Drill & Marching</h3>
+            <p>Discipline and precision</p>
+          </div>
+        </div>
+      </div>
+      <div class="gallery-item reveal" onclick="openLightbox(this)">
+        <img src="https://images.unsplash.com/photo-1529156069898-49953e39b270?w=600" alt="Service">
+        <div class="gallery-overlay">
+          <div>
+            <h3>❤️ Community Service</h3>
+            <p>Serving others with joy</p>
+          </div>
+        </div>
+      </div>
+      <div class="gallery-item reveal" onclick="openLightbox(this)">
+        <img src="https://images.unsplash.com/photo-1475483768296-6163e08872a1?w=600" alt="Bible Study">
+        <div class="gallery-overlay">
+          <div>
+            <h3>📖 Bible Study</h3>
+            <p>Growing in God's Word</p>
+          </div>
+        </div>
+      </div>
+      <div class="gallery-item reveal" onclick="openLightbox(this)">
+        <img src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?w=600" alt="Worship">
+        <div class="gallery-overlay">
+          <div>
+            <h3>🙏 Worship Time</h3>
+            <p>Praising our Creator</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+  <button class="lightbox-close">&times;</button>
+  <img id="lightbox-img" src="" alt="">
+  <div class="lightbox-caption" id="lightbox-caption"></div>
+</div>
+
+<!-- PLEDGE & LAW -->
+<section id="pledge" class="pledge-section">
+  <div class="container">
+    <h2 class="section-title reveal">Our Pledge & Law</h2>
+    <p class="section-subtitle reveal">The foundation of every Pathfinder's journey</p>
+    <div class="pledge-tabs reveal">
+      <button class="tab-btn active" onclick="switchTab(event, 'pledge')">The Pledge</button>
+      <button class="tab-btn" onclick="switchTab(event, 'law')">The Law</button>
+      <button class="tab-btn" onclick="switchTab(event, 'motto')">The Motto</button>
+    </div>
+    <div id="pledge" class="tab-content active">
+      <div class="pledge-box reveal">
+        <h3>⚜️ The Pathfinder Pledge</h3>
+        <div class="pledge-text">
+          <p>By the grace of God,</p>
+          <p>I will be pure, and kind, and true;</p>
+          <p>I will keep the Pathfinder Law;</p>
+          <p>I will be a servant of God and a friend to all.</p>
+        </div>
+      </div>
+    </div>
+    <div id="law" class="tab-content">
+      <div class="pledge-box reveal">
+        <h3>⚜️ The Pathfinder Law</h3>
+        <div class="pledge-text">
+          <p><strong>1.</strong> The morning watch is the Pathfinder's duty.</p>
+          <p><strong>2.</strong> The Pathfinder is loyal and true to God and to his leaders.</p>
+          <p><strong>3.</strong> The Pathfinder keeps the alert.</p>
+          <p><strong>4.</strong> The Pathfinder is a cheerful friend.</p>
+          <p><strong>5.</strong> The Pathfinder is courteous and obedient.</p>
+          <p><strong>6.</strong> The Pathfinder walks softly in God's great outdoors.</p>
+          <p><strong>7.</strong> The Pathfinder does a good turn every day.</p>
+          <p><strong>8.</strong> The Pathfinder keeps himself physically strong, mentally awake, and morally straight.</p>
+        </div>
+      </div>
+    </div>
+    <div id="motto" class="tab-content">
+      <div class="pledge-box reveal">
+        <h3>⚜️ The Pathfinder Motto & Verse</h3>
+        <div class="pledge-text" style="text-align: center;">
+          <p style="font-size: 1.8rem; color: #ffd700; border-left: none;"><strong>"The Lord is my Strength"</strong></p>
+          <p style="border-left: none; margin-top: 20px;">"I can do all things through Christ who strengthens me."</p>
+          <p style="border-left: none;"><strong>— Philippians 4:13</strong></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ACTIVITIES -->
+<section id="activities">
+  <div class="container">
+    <h2 class="section-title reveal">What We Do</h2>
+    <p class="section-subtitle reveal">Adventure, service, and spiritual growth — every week!</p>
+    <div class="activities-grid">
+      <div class="activity-card reveal" onclick="showDetail('Drill & Marching', 'Every Saturday 8:00 AM. Learn precision, teamwork, and discipline in uniform.')">
+        <div class="icon">🎖️</div>
+        <h3>Drill & Marching</h3>
+        <p>Discipline and teamwork through precision marching</p>
+      </div>
+      <div class="activity-card reveal" onclick="showDetail('Camping', 'Quarterly outdoor adventures! Learn survival skills, nature study, and enjoy God\'s creation.')">
+        <div class="icon">⛺</div>
+        <h3>Camping & Hiking</h3>
+        <p>Outdoor adventures and survival skills</p>
+      </div>
+      <div class="activity-card reveal" onclick="showDetail('Honors Program', 'Earn special honors in nature, crafts, sports, and community service. Investiture twice a year!')">
+        <div class="icon">🏅</div>
+        <h3>Honors & Awards</h3>
+        <p>Earn honors in various skill areas</p>
+      </div>
+      <div class="activity-card reveal" onclick="showDetail('Bible Study', 'Interactive Bible lessons every Sabbath 9 AM. Memory verses, quizzes, and spiritual growth.')">
+        <div class="icon">📖</div>
+        <h3>Bible Study</h3>
+        <p>Grow in God\'s Word together</p>
+      </div>
+      <div class="activity-card reveal" onclick="showDetail('Community Service', 'Monthly projects: visiting the elderly, helping the needy, and doing good turns daily!')">
+        <div class="icon">🤝</div>
+        <h3>Community Service</h3>
+        <p>Serving others with love</p>
+      </div>
+      <div class="activity-card reveal" onclick="showDetail('Camporee', 'Annual gathering with other Pathfinder clubs! Competitions, fellowship, and unforgettable memories.')">
+        <div class="icon">🎪</div>
+        <h3>Camporees</h3>
+        <p>Annual club gatherings and competitions</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COUNTDOWN -->
+<section class="countdown-section">
+  <div class="container">
+    <h2 class="section-title reveal">Next Camporee Countdown</h2>
+    <p class="section-subtitle reveal" style="color: #1e3c72;">Get ready for the biggest Pathfinder event of the year!</p>
+    <div class="countdown-grid reveal">
+      <div class="countdown-box">
+        <div class="number" id="days">00</div>
+        <div class="label">Days</div>
+      </div>
+      <div class="countdown-box">
+        <div class="number" id="hours">00</div>
+        <div class="label">Hours</div>
+      </div>
+      <div class="countdown-box">
+        <div class="number" id="minutes">00</div>
+        <div class="label">Minutes</div>
+      </div>
+      <div class="countdown-box">
+        <div class="number" id="seconds">00</div>
+        <div class="label">Seconds</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA SECTION -->
+<section class="cta-section">
+  <div class="container">
+    <h2 class="section-title reveal">Ready to Join the Adventure?</h2>
+    <p class="reveal">Whether you're a parent looking to enroll your child, or you want to volunteer as a counselor, we'd love to hear from you!</p>
+    <div class="hero-btns reveal">
+      <a href="contacts.html" class="btn btn-primary">📞 Contact Us</a>
+      <a href="home.html" class="btn btn-outline">🏠 Back to Home</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-col">
+      <h4>⚜️ Pathfinders</h4>
+      <p style="color: #ccc; line-height: 1.8;">Mfangano Central SDA Church — Building Christ-like character in the noble army of youth.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <a href="index.html">🏠 Home</a>
+      <a href="#about">About Us</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#activities">Activities</a>
+    </div>
+    <div class="footer-col">
+      <h4>Other Ministries</h4>
+      <a href="youth.html">Youth Ministry</a>
+      <a href="children.html">Children's Ministry</a>
+      <a href="women.html">Women's Ministry</a>
+      <a href="men.html">Men's Ministry</a>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <a href="contacts.html">📞 Contacts Page</a>
+      <a href="#">📍 Mfangano Island</a>
+      <a href="#">✉️ pathfinders@mfanganosda.org</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2026 Mfangano Central SDA Church — Pathfinders Ministry</p>
+    <p style="margin-top: 8px; color: #ffd700;">"The Lord is my Strength"</p>
+  </div>
+</footer>
+
+<script>
+  // SCROLL REVEAL ANIMATION
+  const reveals = document.querySelectorAll('.reveal');
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+      }
+    });
+  }, { threshold: 0.15 });
+  reveals.forEach(el => revealObserver.observe(el));
+
+  // LIGHTBOX
+  function openLightbox(item) {
+    const img = item.querySelector('img');
+    const caption = item.querySelector('h3').innerText;
+    document.getElementById('lightbox-img').src = img.src;
+    document.getElementById('lightbox-caption').innerText = caption;
+    document.getElementById('lightbox').classList.add('active');
+  }
+  function closeLightbox() {
+    document.getElementById('lightbox').classList.remove('active');
+  }
+
+  // PLEDGE TABS
+  function switchTab(e, id) {
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+    e.target.classList.add('active');
+    document.getElementById(id).classList.add('active');
+  }
+
+  // ACTIVITY DETAILS
+  function showDetail(title, info) {
+    alert(`⚜️ ${title}\n\n${info}\n\nContact the Pathfinder Director or visit the Contacts page for more details!`);
+  }
+
+  // COUNTDOWN TIMER (to next Camporee - Dec 20, 2026)
+  const camporeeDate = new Date('Dec 20, 2026 08:00:00').getTime();
+  function updateCountdown() {
+    const now = new Date().getTime();
+    const distance = camporeeDate - now;
+    if (distance < 0) {
+      document.getElementById('days').innerText = '🎉';
+      document.getElementById('hours').innerText = 'NOW!';
+      document.getElementById('minutes').innerText = '';
+      document.getElementById('seconds').innerText = '';
+      return;
+    }
+    document.getElementById('days').innerText = String(Math.floor(distance / (1000*60*60*24))).padStart(2,'0');
+    document.getElementById('hours').innerText = String(Math.floor((distance % (1000*60*60*24)) / (1000*60*60))).padStart(2,'0');
+    document.getElementById('minutes').innerText = String(Math.floor((distance % (1000*60*60)) / (1000*60))).padStart(2,'0');
+    document.getElementById('seconds').innerText = String(Math.floor((distance % (1000*60)) / 1000)).padStart(2,'0');
+  }
+  setInterval(updateCountdown, 1000);
+  updateCountdown();
+
+  // PARALLAX EFFECT ON HERO
+  window.addEventListener('scroll', () => {
+    const scrolled = window.pageYOffset;
+    const hero = document.querySelector('.hero');
+    if (hero) hero.style.backgroundPositionY = scrolled * 0.5 + 'px';
+  });
+</script>
+
+</body>
+</html>

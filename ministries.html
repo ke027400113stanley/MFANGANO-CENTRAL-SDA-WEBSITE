@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events - Mfangano Central SDA Church</title>
+    <script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=JPMdxV5P-YExy9IpJ-h8RAiTS17TXOsCDmejPFGuqiaUMP45tWVyKYV0Gdw5jGuEQn8ptL6_Ia88qcojh6gDBiQk9aQTrzDaXaiHba_Uv3SlgD2oALbRbvuDCxuyB2sH8pqcXccSbzrdMo0WK6y1YSbejnM08BoKHM2vj4yyhWQhatV4WjAo3izMfqjo2Oi493h0lNFrFaxYW71CTY5MN2fItDHsnPd2VhfAu7Y2qetryRtYH-aLH-AzW-X7gsvEWRCOd0lGBGgymUuIXsqrjpQPV8RSMEuWd5i3lzaJfKyZoqtjuB229FV1k5oDQHIVMlvWVw26QCHJx---_HoUG_u-YNuM-w5vWaaSYKU-QUoL61hzinxa8MhDuM_0aOLISMg9mRGVzfvbkrvYyJ1b1ktA6dOWD1AmRqFgxLD8UW-X07yjMyg8eSowinRwLcuduCP5F1fH4po_ISCAHjg1VP59YjjVAhG5c53ooyep9q_oq3iWblIR9gVsZlmMZDueTZj95VxRZN05Ul-pyvO0Sus8ijp7uabmRd9lpD0-0cz5-mNPuVYmjU8l5lOkbh224_sNENSsHEP57SAfuKvwjBdBzUxnN2go-ACaANZOoAqJ9klAfhlhQf-FE1HxvVtRCj4OKmfwSgbFdztxYTKbAfuqL856PHxx_D1XXMO5TNrwYjRrxKvw6VzlVPqCZ8iPzP6jEghBAG9D-nMk6K3xUNWSxlzlK95DW7qyLDzbgGh5woXl8X00enCvjC3EMTp7fGwdlkbZoA0beWWXKZH7pbbM9WxhGHmatBY9JEb_2XpF04rWnMOpI3DEJfZcI2Snn2wTOiQ7Jd54fDad376I0-tPti7y5bMGBclGWY8_B3tEWn1wPrtNBPvHw4eKb7NpWI-pf8T69f7rT5TBosb1O8vVqbBuQAnwr9ft9lGHHxn8EaYOkpS2v-sr_1NMaCZ5wZciu0YNr6UY4RgRcbl_ktWJKNaI3SLcwU0j0uRysmz16IAbvhCwjLRNI7rptnmIoRGCifllOdwafuAcTfdWgWmS2ty_VFQzGNfuqD2h7dl8ylMKwFI-Dg0kyX6dsoyoH39UjARleGFPCYCIrmOJPlqHMpZ5U0jN-vf4DgAbEkH_emi4SQqXU4TW_t1MBE50XeDVcA8AG_z0wk9iQqmUng0g97xVx90l2IdNCg3c3g67HlAPGhNCeoVa3C6WhVVOTYw0f3Ovm0gXhZsJRQBvVSn-yrSFvTnEtl6b_mL6UZsSK018ftQIjpWf5tHhWASK2SPotST_Fy2QL3js9Fof9EshCm84zV2-MUhoATpIpzxHlcQPqG1f0aMfUMs8TFGLygJVD-gpjqvQeCQ4GLw7O3Icazgmcan6Ekd-xOxElbgr6vpDoI4YP31mbgR1K1VdjdaT4HsvV4stcFXm2Hkm_n9OfizOvUW_qW5q_xW4waW1lkC4A0qt7-jkPrYVLOO8WK9K5ZhaZEll8UGYRrV1gcRgVoWaHyIJ2aksmYoAPR1oITQmHXXBYSu6R5CC_PqAOJvHX0PCWQMDnTPbyjrojgkoU8AnyyQjGbsoT89Lnzr8UEUUg-opr31BqAB-uQWUstB-hZsRfJOi-QFiT9PI3bXnj5_Epx_NKWd066P6mDa0S659slfaxfgx5eN_0nBb7cZGWdwQpDwXu0E2x_EoRyPRggiFzS7Svd_t019wkGtA-NPlRmD1mCyMasFO18AG_FsBipzBm-MG4UJMJolRZEBetRBHUO0marP8PjVhGSg" nonce="a5316784f5c71b5d01302d5d6674fc24" charset="UTF-8"></script><style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1548625149-fc4a29cf7092?w=1920');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            min-height: 100vh;
+        }
+
+        .container {
+            display: flex;
+            min-height: 100vh;
+        }
+
+        /* Side Navigation */
+        .sidebar {
+            width: 280px;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 30px 0;
+            position: fixed;
+            height: 100vh;
+            overflow-y: auto;
+            box-shadow: 4px 0 10px rgba(0,0,0,0.3);
+            z-index: 1000;
+        }
+
+        .church-logo {
+            text-align: center;
+            padding: 0 20px 30px;
+            border-bottom: 2px solid rgba(255,255,255,0.2);
+            margin-bottom: 30px;
+        }
+
+        .church-logo h1 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .church-logo p {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+
+        .nav-menu {
+            list-style: none;
+            padding: 0 20px;
+        }
+
+        .nav-menu li {
+            margin-bottom: 10px;
+        }
+
+        .nav-menu a {
+            display: block;
+            padding: 15px 20px;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            font-size: 16px;
+        }
+
+        .nav-menu a:hover, .nav-menu a.active {
+            background: rgba(255,255,255,0.2);
+            transform: translateX(5px);
+        }
+
+        .nav-menu a i {
+            margin-right: 10px;
+            width: 20px;
+        }
+
+        /* Main Content */
+        .main-content {
+            margin-left: 280px;
+            flex: 1;
+            padding: 40px;
+        }
+
+        .header {
+            background: rgba(255,255,255,0.95);
+            padding: 30px 40px;
+            border-radius: 15px;
+            margin-bottom: 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+
+        .header h2 {
+            color: #1e3c72;
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            color: #666;
+            font-size: 18px;
+        }
+
+        /* Events Grid */
+        .events-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .event-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .event-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+        }
+
+        .event-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            background: #ddd;
+        }
+
+        .event-content {
+            padding: 25px;
+        }
+
+        .event-date {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 14px;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+
+        .event-title {
+            font-size: 24px;
+            color: #1e3c72;
+            margin-bottom: 10px;
+        }
+
+        .event-description {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .event-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 15px;
+            border-top: 1px solid #eee;
+        }
+
+        .event-location, .event-time {
+            color: #888;
+            font-size: 14px;
+        }
+
+        .event-location i, .event-time i {
+            margin-right: 5px;
+            color: #667eea;
+        }
+
+        .btn-register {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 15px;
+            width: 100%;
+            transition: transform 0.3s ease;
+        }
+
+        .btn-register:hover {
+            transform: scale(1.05);
+        }
+
+        /* Filter Section */
+        .filter-section {
+            background: rgba(255,255,255,0.95);
+            padding: 20px 30px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .filter-section h3 {
+            color: #1e3c72;
+            margin-bottom: 15px;
+        }
+
+        .filter-buttons {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            padding: 10px 20px;
+            border: 2px solid #667eea;
+            background: white;
+            color: #667eea;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 14px;
+        }
+
+        .filter-btn:hover, .filter-btn.active {
+            background: #667eea;
+            color: white;
+        }
+
+        /* Mobile Menu Toggle */
+        .menu-toggle {
+            display: none;
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 1001;
+            background: #1e3c72;
+            color: white;
+            border: none;
+            padding: 15px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 24px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .sidebar {
+                transform: translateX(-100%);
+                transition: transform 0.3s ease;
+            }
+
+            .sidebar.active {
+                transform: translateX(0);
+            }
+
+            .main-content {
+                margin-left: 0;
+                padding: 80px 20px 20px;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            .events-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Footer */
+        .footer {
+            background: rgba(255,255,255,0.95);
+            padding: 30px 40px;
+            border-radius: 15px;
+            text-align: center;
+            color: #666;
+        }
+
+        .footer p {
+            margin-bottom: 10px;
+        }
+
+        .social-links {
+            margin-top: 15px;
+        }
+
+        .social-links a {
+            display: inline-block;
+            margin: 0 10px;
+            color: #1e3c72;
+            font-size: 24px;
+            transition: transform 0.3s ease;
+        }
+
+        .social-links a:hover {
+            transform: scale(1.2);
+        }
+    </style>
+</head>
+<body>
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    
+    <div class="container">
+        <!-- Side Navigation -->
+        <nav class="sidebar" id="sidebar">
+            <div class="church-logo">
+                <h1>🏛️ Mfangano Central SDA</h1>
+                <p>Seventh-day Adventist Church</p>
+                <p style="font-size: 12px; margin-top: 10px;">"Growing in Faith, Serving in Love"</p>
+            </div>
+            
+            <ul class="nav-menu">
+                <li><a href="index.html" onclick="showSection('home')"><span>🏠</span> Home</a></li>
+                <li><a href="events.html" class="active" onclick="showSection('events')"><span>📅</span> Events</a></li>
+                <li><a href="ministries.html" onclick="showSection('ministries')"><span>🙏</span> Ministries</a></li>
+                <li><a href="sermons.html" onclick="showSection('sermons')"><span>📖</span> Sermons</a></li>
+                <li><a href="events.html" onclick="showSection('gallery')"><span>📷</span> Gallery</a></li>
+                <li><a href="about.html" onclick="showSection('about')"><span>ℹ️</span> About Us</a></li>
+                <li><a href="contacts.html" onclick="showSection('contact')"><span>📞</span> Contact</a></li>
+                <li><a href="ministries.html" onclick="showSection('give')"><span>💝</span> Give Online</a></li>
+            </ul>
+            
+            <div style="padding: 30px 20px; margin-top: 30px; border-top: 2px solid rgba(255,255,255,0.2);">
+                <p style="font-size: 14px; margin-bottom: 10px;"><strong>Service Times:</strong></p>
+                <p style="font-size: 13px; opacity: 0.9;">Sabbath School: 9:00 AM</p>
+                <p style="font-size: 13px; opacity: 0.9;">Worship Service: 11:00 AM</p>
+                <p style="font-size: 13px; opacity: 0.9;">Wednesday Prayer: 6:00 PM</p>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="header">
+                <h2>Church Events</h2>
+                <p>Join us for these upcoming events and activities at Mfangano Central SDA</p>
+            </div>
+
+            <!-- Filter Section -->
+            <div class="filter-section">
+                <h3>Filter Events</h3>
+                <div class="filter-buttons">
+                    <button class="filter-btn active" onclick="filterEvents('all')">All Events</button>
+                    <button class="filter-btn" onclick="filterEvents('worship')">Worship</button>
+                    <button class="filter-btn" onclick="filterEvents('youth')">Youth</button>
+                    <button class="filter-btn" onclick="filterEvents('community')">Community</button>
+                    <button class="filter-btn" onclick="filterEvents('special')">Special</button>
+                </div>
+            </div>
+
+            <!-- Events Grid -->
+            <div class="events-grid" id="eventsGrid">
+                <!-- Event 1 -->
+                <div class="event-card" data-category="worship">
+                    <img src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=800" alt="Worship Service" class="event-image">
+                    <div class="event-content">
+                        <span class="event-date">Every Sabbath</span>
+                        <h3 class="event-title">Weekly Worship Service</h3>
+                        <p class="event-description">Join us for a powerful time of worship, prayer, and learning from God's Word. All are welcome!</p>
+                        <div class="event-meta">
+                            <span class="event-location">📍 Main Sanctuary</span>
+                            <span class="event-time"> 11:00 AM</span>
+                        </div>
+                        <button class="btn-register" onclick="registerEvent('Weekly Worship Service')">Join Us</button>
+                    </div>
+                </div>
+
+                <!-- Event 2 -->
+                <div class="event-card" data-category="youth">
+                    <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=800" alt="Youth Meeting" class="event-image">
+                    <div class="event-content">
+                        <span class="event-date">Friday, Aug 28</span>
+                        <h3 class="event-title">Youth Friday Night</h3>
+                        <p class="event-description">An exciting evening of fellowship, games, and spiritual growth for our young people ages 13-35.</p>
+                        <div class="event-meta">
+                            <span class="event-location">📍 Youth Hall</span>
+                            <span class="event-time">🕐 6:00 PM</span>
+                        </div>
+                        <button class="btn-register" onclick="registerEvent('Youth Friday Night')">Register Now</button>
+                    </div>
+                </div>
+
+                <!-- Event 3 -->
+                <div class="event-card" data-category="community">
+                    <img src="https://images.unsplash.com/photo-1559027615-cd4628902d4a?w=800" alt="Community Outreach" class="event-image">
+                    <div class="event-content">
+                        <span class="event-date">Saturday, Sep 5</span>
+                        <h3 class="event-title">Community Outreach Program</h3>
+                        <p class="event-description">Join us as we reach out to our community with health screenings, food distribution, and prayer.</p>
+                        <div class="event-meta">
+                            <span class="event-location">📍 Church Grounds</span>
+                            <span class="event-time">🕐 9:00 AM</span>
+                        </div>
+                        <button class="btn-register" onclick="registerEvent('Community Outreach')">Volunteer</button>
+                    </div>
+                </div>
+
+                <!-- Event 4 -->
+                <div class="event-card" data-category="special">
+                    <img src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?w=800" alt="Baptism" class="event-image">
+                    <div class="event-content">
+                        <span class="event-date">Saturday, Sep 12</span>
+                        <h3 class="event-title">Baptism Service</h3>
+                        <p class="event-description">Celebrating new believers as they take the step of baptism. A special time of joy and commitment.</p>
+                        <div class="event-meta">
+                            <span class="event-location">📍 Baptismal Pool</span>
+                            <span class="event-time"> 3:00 PM</span>
+                        </div>
+                        <button class="btn-register" onclick="registerEvent('Baptism Service')">Attend</button>
+                    </div>
+                </div>
+
+                <!-- Event 5 -->
+                <div class="event-card" data-category="worship">
+                    <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=800" alt="Prayer Meeting" class="event-image">
+                    <div class="event-content">
+                        <span class="event-date">Every Wednesday</span>
+                        <h3 class="event-title">Midweek Prayer Meeting</h3>
+                        <p class="event-description">Midweek refreshment through prayer, Bible study, and testimonies. Strengthen your faith!</p>
+                        <div class="event-meta">
+                            <span class="event-location">📍 Prayer Room</span>
+                            <span class="event-time">🕐 6:00 PM</span>
+                        </div>
+                        <button class="btn-register" onclick="registerEvent('Prayer Meeting')">Join Prayer</button>
+                    </div>
+                </div>
+
+                <!-- Event 6 -->
+                <div class="event-card" data-category="special">
+                    <img src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=800" alt="Church Anniversary" class="event-image">
+                    <div class="event-content">
+                        <span class="event-date">Oct 15-17, 2026</span>
+                        <h3 class="event-title">Church Anniversary Celebration</h3>
+                        <p class="event-description">Join us for our annual church anniversary with special guests, music, and celebration!</p>
+                        <div class="event-meta">
+                            <span class="event-location">📍 Main Sanctuary</span>
+                            <span class="event-time">🕐 All Day</span>
+                        </div>
+                        <button class="btn-register" onclick="registerEvent('Church Anniversary')">RSVP</button>
+                    </div>
+                </div>
+
+                <!-- Event 7 -->
+                <div class="event-card" data-category="youth">
+                    <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=800" alt="Sabbath School" class="event-image">
+                    <div class="event-content">
+                        <span class="event-date">Every Sabbath</span>
+                        <h3 class="event-title">Sabbath School</h3>
+                        <p class="event-description">Bible study in small groups followed by a unified lesson discussion. Great for all ages!</p>
+                        <div class="event-meta">
+                            <span class="event-location">📍 Various Classrooms</span>
+                            <span class="event-time">🕐 9:00 AM</span>
+                        </div>
+                        <button class="btn-register" onclick="registerEvent('Sabbath School')">Participate</button>
+                    </div>
+                </div>
+
+                <!-- Event 8 -->
+                <div class="event-card" data-category="community">
+                    <img src="https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?w=800" alt="Pathfinders" class="event-image">
+                    <div class="event-content">
+                        <span class="event-date">Sunday, Aug 30</span>
+                        <h3 class="event-title">Pathfinders Club</h3>
+                        <p class="event-description">Adventure, skill building, and spiritual growth for children ages 10-15. Parents welcome!</p>
+                        <div class="event-meta">
+                            <span class="event-location">📍 Church Grounds</span>
+                            <span class="event-time">🕐 2:00 PM</span>
+                        </div>
+                        <button class="btn-register" onclick="registerEvent('Pathfinders Club')">Enroll Child</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <div class="footer">
+                <p><strong>Mfangano Central SDA Church</strong></p>
+                <p>📍 Mfangano Island, Kenya | 📞 +254 123 456 789</p>
+                <p>✉️ info@mfanganocentralsda.org</p>
+                <div class="social-links">
+                    <a href="#">📘</a>
+                    <a href="#">📸</a>
+                    <a href="#">🐦</a>
+                    <a href="#">▶️</a>
+                </div>
+                <p style="margin-top: 20px; font-size: 14px;">© 2026 Mfangano Central SDA Church. All rights reserved.</p>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        // Toggle Mobile Menu
+        function toggleMenu() {
+            const sidebar = document.getElementById('sidebar');
+            sidebar.classList.toggle('active');
+        }
+
+        // Show Section (Navigation)
+        function showSection(section) {
+            // Remove active class from all links
+            const links = document.querySelectorAll('.nav-menu a');
+            links.forEach(link => link.classList.remove('active'));
+            
+            // Add active class to clicked link
+            event.target.classList.add('active');
+            
+            // Show alert for demo purposes
+            if(section !== 'events') {
+                alert('Navigating to ' + section + ' section. This would load the ' + section + ' page in a full website.');
+            }
+            
+            // Close mobile menu if open
+            if(window.innerWidth <= 768) {
+                toggleMenu();
+            }
+        }
+
+        // Filter Events
+        function filterEvents(category) {
+            const cards = document.querySelectorAll('.event-card');
+            const buttons = document.querySelectorAll('.filter-btn');
+            
+            // Update active button
+            buttons.forEach(btn => {
+                btn.classList.remove('active');
+                if(btn.textContent.toLowerCase().includes(category) || 
+                   (category === 'all' && btn.textContent.includes('All'))) {
+                    btn.classList.add('active');
+                }
+            });
+            
+            // Filter cards
+            cards.forEach(card => {
+                if(category === 'all' || card.dataset.category === category) {
+                    card.style.display = 'block';
+                    card.style.animation = 'fadeIn 0.5s ease';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        // Register for Event
+        function registerEvent(eventName) {
+            const confirmed = confirm(`Would you like to register for ${eventName}?`);
+            if(confirmed) {
+                alert(`Thank you for registering for ${eventName}! We look forward to seeing you at Mfangano Central SDA Church.`);
+            }
+        }
+
+        // Add fadeIn animation
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes fadeIn {
+                from { opacity: 0; transform: translateY(20px); }
+                to { opacity: 1; transform: translateY(0); }
+            }
+        `;
+        document.head.appendChild(style);
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if(target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+
+        // Add scroll effect to sidebar
+        window.addEventListener('scroll', () => {
+            const sidebar = document.querySelector('.sidebar');
+            if(window.scrollY > 50) {
+                sidebar.style.boxShadow = '4px 0 20px rgba(0,0,0,0.4)';
+            } else {
+                sidebar.style.boxShadow = '4px 0 10px rgba(0,0,0,0.3)';
+            }
+        });
+
+        // Current date display
+        const currentDate = new Date();
+        const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+        console.log(`Current Date: ${currentDate.toLocaleDateString('en-US', options)}`);
+    </script>
+</body>
+</html>
