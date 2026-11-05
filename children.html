@@ -4,176 +4,984 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Children's Ministry | Mfangano Central SDA</title>
-<script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=QsS_oCwjSpSuLLQ5zswtZsFVDsOGSNvjiXxZVwZNJ13u6yoHbzyqWcE3B3hH5KUrmvka4X_dvU8qOfwzDs8sVe09IuczOLe9_uQjk_w0kfMqcjdQy5ofefrH1gPCiMYrEXJM-pyaY_jBXi-8CrCHW481CMk6KiUDJJUCV3Xn_Y1eXDMW3bExll4FRVHNsgz8sPo10YorISQNU-tw8HrDjvgBENZzeypo7M5Gco4HEN-uHsCAY9LhbgsFFYBiTevQa_G4u9yLbVcT6Ogsi76GYfs7G8W-ODp4tIYoUgxQaEOP6ERhPxCeiB36vVnohF3WAr1VJbz0lTHowC-bBHP4ATd8zL2zWzCdr0ToBrI4I7cRuCLm8o9EqfP2yhhfmVLxN0v4bYWAIEYBK_c8DZhK3TtEEWIgaTBzfYTDtmzpSDTT7ksXBBbgiafDTiURnV0yuN8yG-R7qqQvLwaNwM_VoRYqiazDFCVyGAWJtYg_l9rnzonriMe6zHv03Xk9GnCrnQE-kGgFRJXL5K3i6CUdnU5W_-gaATHkwLYVcJul792bVxFWG2STrAbsrDyy6LTPEkMhajUCwVzL0Ysb26IIIqnjkon5kef-b2rtJTMe0GW46TrUwTwpLPc86CJ5XYTUfy3u1yzclkbmLfWedNopp6-o8_B32HvrT5EDIo8dcBQgl4u_NRTqihN68ddAmWaJRyNHgByvdFAa-jELRhqLGWcyVGq1QbGZByHkvYuzzGTg6L7mXSx_rIsOj22rDZ-4s-1tAfZvmcCr_TnFRQ5j2eUCuDM2dSZHgyri70IHoPlG3jv_3YIl3bPzykcRgUpKlfE4j3PaNzSwszbKRAKZo8IebaLcXbt4oYA3F_Qy5Mmo6Bo3vUbn-tu7-qVhaziO6sjkQmNI6ptDdzHkOVRgU6ptAyH-XnpWbLO8-fNb2V-jczEirDjfVnI7KMdB_zE_nGtai09yq7JQDNoMZqOCi1DRlJ4zyZABw-BsE8PephlWPj7kHQ4prXNkCcdecyhB7RDXI4vTDwgBD5SKJZgV2PUxDWPz4KjeYo9-EBqaZYrvw2mrCK2ZED06Jv5Ib-_wtm0Tvr2sGjL8CklpmdRYHilnhCER0WieeJnDJo3LZ2GASEqF5E-fFdBWuw_aTAmi_bEath0En8hBlLznK5CEWKaZVMZHDFIPe7OZUSJvTmKGGxh6R4QHquPBP-aELVyYUciJt8dOBU5Tb-X3WJajXKO3LfeGY_eMWa92hyJ6ttfpMig1dVFwCgt6Nhv50km0Tkf4a8UjBB4G5VJ9fHs7X8QuN0s8isjJbHHtT5aWBUCFPq1zCf7zUzNgjOTMrXq-Y8SmEwiWixKOstkpT0ZPLR8Aui6irTqm_6oOC73PtHsINSNQSNQUy3YAW78oAtvdnWaAa0QZ5h7xh8F0oXTfT4HlACPrjykVtlVp7Ywc2mpe9DZwwbYXiQbwoPpR1-IQPd3p0Qii093Slog9FTzAZfvkic8zm1uxFTOHBEhlsvBikpRmFqB-99XKbWP2htvsxMqo3Zda-5J-LU1Vlrs7qcGoLl-Idko3GVXfftWMMSPW3Ca7bZp5O9MgcJULsaaQZfkCygFGU3qSAlkx2E85nmpmuRGzWgf260RZoIxV-jTHqT-NQLtCLalsIZfFuhtcMslMPVo29CtT5bX32nqFVTR8_APSjgoK3-n9aKpbbSuwBKzn6YSfF9Ylr7DT-ySd" nonce="4e5a7d225b2df620d4064683fa633120" charset="UTF-8"></script><style>
-  * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Comic Sans MS', cursive, sans-serif; }
+<meta name="description" content="A fun, safe, and loving environment for children to learn about Jesus at Mfangano Central SDA Church.">
+
+<!-- Google Fonts: Quicksand (Friendly, rounded headings) & Inter (Clean body text) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<style>
+  /* =========================================
+     1. CSS VARIABLES & RESET
+     ========================================= */
+  :root {
+    --color-bg: #FFFDF7;
+    --color-bg-alt: #F4F8FB;
+    --color-primary: #FF7E67; /* Soft, modern coral/peach */
+    --color-primary-dark: #E86550;
+    --color-secondary: #64B5F6; /* Soft sky blue */
+    --color-accent: #FFD54F; /* Warm, joyful yellow */
+    --color-text: #2D3436;
+    --color-text-light: #636E72;
+    
+    --font-heading: 'Quicksand', sans-serif;
+    --font-body: 'Inter', sans-serif;
+    
+    --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    --shadow-sm: 0 4px 6px rgba(0,0,0,0.04);
+    --shadow-md: 0 10px 30px rgba(0,0,0,0.08);
+    --shadow-lg: 0 20px 40px rgba(0,0,0,0.12);
+    --radius: 16px;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  
+  html { scroll-behavior: smooth; }
+
   body { 
-    background: linear-gradient(135deg, #f093fb 0%, #f5576c 50%, #4facfe 100%); 
-    min-height: 100vh; 
+    font-family: var(--font-body);
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    line-height: 1.7;
+    overflow-x: hidden;
   }
-  
-  header {
-    background: rgba(255,255,255,0.95); padding: 20px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    position: sticky; top: 0; z-index: 100;
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    color: var(--color-text);
+    line-height: 1.3;
   }
-  nav { display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: auto; flex-wrap: wrap; }
-  nav h1 { color: #f5576c; font-size: 1.5rem; }
-  nav ul { list-style: none; display: flex; gap: 15px; flex-wrap: wrap; }
-  nav a {
-    text-decoration: none; color: #333; padding: 8px 15px; border-radius: 25px;
-    transition: all 0.3s; font-weight: 500;
+
+  a { text-decoration: none; color: inherit; transition: var(--transition); }
+  img { max-width: 100%; display: block; }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
   }
-  nav a:hover { background: #f5576c; color: white; }
-  
+
+  /* =========================================
+     2. UTILITY CLASSES & ANIMATIONS
+     ========================================= */
+  .section-padding { padding: 100px 0; }
+  .text-center { text-align: center; }
+  .bg-alt { background-color: var(--color-bg-alt); }
+
+  .section-label {
+    font-family: var(--font-body);
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--color-primary);
+    margin-bottom: 12px;
+    display: inline-block;
+    background: rgba(255, 126, 103, 0.1);
+    padding: 6px 16px;
+    border-radius: 50px;
+  }
+
+  .section-title {
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+  }
+
+  .section-subtitle {
+    font-size: 1.15rem;
+    color: var(--color-text-light);
+    max-width: 650px;
+    margin: 0 auto 48px;
+  }
+
+  /* Scroll Reveal */
+  .reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  }
+  .reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Buttons */
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 16px 36px;
+    font-family: var(--font-heading);
+    font-size: 1.05rem;
+    font-weight: 700;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: var(--transition);
+    border: none;
+  }
+
+  .btn-primary {
+    background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
+    color: white;
+    box-shadow: 0 8px 20px rgba(255, 126, 103, 0.3);
+  }
+  .btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 25px rgba(255, 126, 103, 0.4);
+  }
+
+  .btn-secondary {
+    background-color: white;
+    color: var(--color-primary);
+    border: 2px solid var(--color-primary);
+  }
+  .btn-secondary:hover {
+    background-color: var(--color-primary);
+    color: white;
+  }
+
+  /* =========================================
+     3. NAVBAR
+     ========================================= */
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 20px 0;
+    transition: var(--transition);
+    background: transparent;
+  }
+
+  .navbar.scrolled {
+    background: rgba(255, 253, 247, 0.95);
+    backdrop-filter: blur(12px);
+    padding: 14px 0;
+    box-shadow: var(--shadow-sm);
+  }
+
+  .navbar .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: var(--font-heading);
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: white;
+  }
+  .navbar.scrolled .nav-brand { color: var(--color-text); }
+  .nav-brand i { color: var(--color-accent); font-size: 1.6rem; }
+
+  .nav-links {
+    display: flex;
+    list-style: none;
+    gap: 32px;
+    align-items: center;
+  }
+
+  .nav-links a {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.9);
+    position: relative;
+  }
+  .navbar.scrolled .nav-links a { color: var(--color-text); }
+
+  .nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--color-accent);
+    transition: var(--transition);
+    border-radius: 2px;
+  }
+  .nav-links a:hover::after { width: 100%; }
+  .nav-links a:hover { color: var(--color-accent); }
+
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 6px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 4px;
+  }
+  .hamburger span {
+    display: block;
+    width: 28px;
+    height: 2px;
+    background-color: white;
+    transition: var(--transition);
+    border-radius: 2px;
+  }
+  .navbar.scrolled .hamburger span { background-color: var(--color-text); }
+
+  /* =========================================
+     4. HERO SECTION
+     ========================================= */
   .hero {
-    text-align: center; padding: 80px 20px; color: white;
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+    padding-top: 80px;
   }
-  .hero h2 { font-size: 3rem; margin-bottom: 15px; text-shadow: 3px 3px 6px rgba(0,0,0,0.3); }
-  .hero p { font-size: 1.3rem; max-width: 700px; margin: auto; }
-  
-  .container { max-width: 1200px; margin: auto; padding: 40px 20px; }
-  
-  .bible-story {
-    background: white; padding: 30px; border-radius: 20px; margin-bottom: 30px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.15); border: 3px dashed #f5576c;
+
+  .hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+      linear-gradient(to bottom, rgba(45, 52, 54, 0.4), rgba(45, 52, 54, 0.6)),
+      url('https://images.unsplash.com/photo-1472162072942-cd5147eb3902?q=80&w=2069&auto=format&fit=crop') center center / cover no-repeat;
+    z-index: -1;
+    animation: slowZoom 25s ease-in-out infinite alternate;
   }
-  .bible-story h3 { color: #f5576c; margin-bottom: 15px; font-size: 1.8rem; }
-  .story-text { font-size: 1.1rem; color: #555; line-height: 1.8; }
-  
-  .activities {
-    display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 25px; margin-top: 40px;
+
+  @keyframes slowZoom {
+    0% { transform: scale(1); }
+    100% { transform: scale(1.08); }
   }
-  .activity-card {
-    background: white; padding: 25px; border-radius: 20px; text-align: center;
-    transition: all 0.3s; cursor: pointer; border: 3px solid transparent;
+
+  .hero-content {
+    max-width: 800px;
+    padding: 0 24px;
+    z-index: 2;
+    color: white;
   }
-  .activity-card:hover { 
-    transform: scale(1.05) rotate(2deg); 
-    border-color: #f5576c;
-    box-shadow: 0 10px 30px rgba(245,87,108,0.3);
+
+  .hero-badge {
+    display: inline-block;
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    animation: float 3s ease-in-out infinite;
   }
-  .activity-card .icon { font-size: 4rem; margin-bottom: 15px; }
-  .activity-card h3 { color: #f5576c; margin-bottom: 10px; font-size: 1.5rem; }
-  
-  .fun-btn {
-    display: inline-block; background: linear-gradient(45deg, #f093fb, #f5576c); 
-    color: white; padding: 15px 40px; border-radius: 30px; text-decoration: none; 
-    font-size: 1.2rem; margin-top: 20px; border: none; cursor: pointer;
-    transition: all 0.3s; font-weight: bold;
-  }
-  .fun-btn:hover { transform: scale(1.1); box-shadow: 0 5px 20px rgba(245,87,108,0.5); }
-  
-  footer { background: rgba(0,0,0,0.8); color: white; text-align: center; padding: 20px; margin-top: 50px; }
-  
-  @keyframes bounce {
+
+  @keyframes float {
     0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-20px); }
+    50% { transform: translateY(-10px); }
   }
-  .bounce { animation: bounce 2s infinite; }
+
+  .hero h1 {
+    font-size: 4rem;
+    color: white;
+    margin-bottom: 24px;
+    text-shadow: 0 4px 20px rgba(0,0,0,0.2);
+  }
+
+  .hero-verse {
+    font-family: var(--font-heading);
+    font-size: 1.4rem;
+    font-style: italic;
+    color: rgba(255, 255, 255, 0.95);
+    margin-bottom: 40px;
+    line-height: 1.6;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(8px);
+    padding: 24px 32px;
+    border-radius: var(--radius);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .hero-verse strong {
+    display: block;
+    margin-top: 10px;
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    font-style: normal;
+    font-weight: 600;
+    color: var(--color-accent);
+    letter-spacing: 1px;
+  }
+
+  .hero-wave {
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    line-height: 0;
+    z-index: 3;
+  }
+  .hero-wave svg {
+    width: 100%;
+    height: 80px;
+    display: block;
+  }
+
+  /* =========================================
+     5. BIBLE STORY SECTION
+     ========================================= */
+  .story-card {
+    background: white;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    border: 1px solid rgba(0,0,0,0.04);
+  }
+
+  .story-image {
+    position: relative;
+    min-height: 400px;
+    background: linear-gradient(135deg, var(--color-secondary), #90CAF9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
   
-  @keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
-  .spin { animation: spin 3s linear infinite; display: inline-block; }
+  .story-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.9;
+  }
+
+  .story-content {
+    padding: 48px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .story-content h3 {
+    font-size: 2.2rem;
+    color: var(--color-primary);
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .story-text {
+    font-size: 1.1rem;
+    color: var(--color-text-light);
+    line-height: 1.9;
+    margin-bottom: 24px;
+  }
+
+  .story-highlight {
+    background: linear-gradient(120deg, rgba(255, 213, 79, 0.3) 0%, rgba(255, 213, 79, 0.1) 100%);
+    border-left: 4px solid var(--color-accent);
+    padding: 20px 24px;
+    border-radius: 0 12px 12px 0;
+    font-family: var(--font-heading);
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--color-text);
+  }
+
+  /* =========================================
+     6. ACTIVITIES SECTION
+     ========================================= */
+  .activities-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+  }
+
+  .activity-card {
+    background: white;
+    padding: 40px 28px;
+    border-radius: 20px;
+    text-align: center;
+    transition: var(--transition);
+    border: 2px solid transparent;
+    box-shadow: var(--shadow-sm);
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .activity-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, var(--color-primary), var(--color-accent));
+    transform: scaleX(0);
+    transition: transform 0.4s ease;
+  }
+
+  .activity-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg);
+    border-color: rgba(255, 126, 103, 0.2);
+  }
+
+  .activity-card:hover::before {
+    transform: scaleX(1);
+  }
+
+  .activity-icon {
+    width: 80px;
+    height: 80px;
+    background: var(--color-bg-alt);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: var(--color-primary);
+    margin: 0 auto 24px;
+    transition: var(--transition);
+  }
+
+  .activity-card:hover .activity-icon {
+    background: var(--color-primary);
+    color: white;
+    transform: scale(1.1) rotate(5deg);
+  }
+
+  .activity-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 12px;
+    color: var(--color-text);
+  }
+
+  .activity-card p {
+    color: var(--color-text-light);
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  /* =========================================
+     7. CTA SECTION
+     ========================================= */
+  .cta-section {
+    background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
+    padding: 100px 0;
+    text-align: center;
+    color: white;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .cta-section::before {
+    content: '🎈';
+    position: absolute;
+    font-size: 15rem;
+    opacity: 0.1;
+    top: -40px;
+    left: -40px;
+    transform: rotate(-15deg);
+  }
+  .cta-section::after {
+    content: '🌟';
+    position: absolute;
+    font-size: 12rem;
+    opacity: 0.1;
+    bottom: -40px;
+    right: -40px;
+    transform: rotate(15deg);
+  }
+
+  .cta-section h2 {
+    font-size: 3rem;
+    color: white;
+    margin-bottom: 20px;
+  }
+
+  .cta-section p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto 40px;
+    color: rgba(255, 255, 255, 0.9);
+  }
+
+  .btn-white {
+    background: white;
+    color: var(--color-primary);
+    font-weight: 700;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  }
+  .btn-white:hover {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.2);
+  }
+
+  /* =========================================
+     8. FOOTER
+     ========================================= */
+  .footer {
+    background-color: var(--color-text);
+    color: rgba(255, 255, 255, 0.7);
+    padding: 60px 0 0;
+    text-align: center;
+  }
+
+  .footer-verse {
+    font-family: var(--font-heading);
+    font-size: 1.4rem;
+    font-style: italic;
+    color: var(--color-accent);
+    margin-bottom: 24px;
+  }
+
+  .footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 24px 0;
+    font-size: 0.9rem;
+  }
+
+  /* =========================================
+     9. MODAL
+     ========================================= */
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(45, 52, 54, 0.7);
+    backdrop-filter: blur(6px);
+    z-index: 2000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: var(--transition);
+    padding: 20px;
+  }
+
+  .modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .modal-content {
+    background-color: white;
+    width: 100%;
+    max-width: 500px;
+    border-radius: 24px;
+    padding: 40px;
+    position: relative;
+    transform: translateY(30px) scale(0.95);
+    transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    box-shadow: var(--shadow-lg);
+    text-align: center;
+  }
+
+  .modal-overlay.active .modal-content {
+    transform: translateY(0) scale(1);
+  }
+
+  .modal-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: var(--color-bg-alt);
+    border: none;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    color: var(--color-text-light);
+    cursor: pointer;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .modal-close:hover { background: var(--color-primary); color: white; }
+
+  .modal-icon {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    display: inline-block;
+    animation: float 3s ease-in-out infinite;
+  }
+
+  .modal-content h3 {
+    font-size: 1.8rem;
+    margin-bottom: 16px;
+    color: var(--color-primary);
+  }
+
+  .modal-content p {
+    color: var(--color-text-light);
+    line-height: 1.7;
+    margin-bottom: 24px;
+    font-size: 1.05rem;
+  }
+
+  .form-group { margin-bottom: 20px; text-align: left; }
+  .form-group label {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: var(--color-text);
+  }
+  .form-group input {
+    width: 100%;
+    padding: 14px 18px;
+    border: 2px solid #E0E0E0;
+    border-radius: 12px;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    transition: var(--transition);
+  }
+  .form-group input:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 4px rgba(255, 126, 103, 0.1);
+  }
+
+  /* =========================================
+     10. RESPONSIVE DESIGN
+     ========================================= */
+  @media (max-width: 1024px) {
+    .hero h1 { font-size: 3.2rem; }
+    .section-title { font-size: 2.4rem; }
+    .activities-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+
+  @media (max-width: 768px) {
+    .hamburger { display: flex; }
+    
+    .nav-links {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 80%;
+      max-width: 300px;
+      height: 100vh;
+      background-color: white;
+      flex-direction: column;
+      justify-content: center;
+      gap: 24px;
+      transition: right 0.4s ease;
+      box-shadow: -10px 0 30px rgba(0,0,0,0.1);
+    }
+    
+    .nav-links.active { right: 0; }
+    .nav-links a { color: var(--color-text) !important; font-size: 1.1rem; }
+    
+    .hero h1 { font-size: 2.6rem; }
+    .hero-verse { font-size: 1.1rem; padding: 20px; }
+    
+    .story-card { grid-template-columns: 1fr; }
+    .story-image { min-height: 250px; }
+    .story-content { padding: 32px 24px; }
+    
+    .activities-grid { grid-template-columns: 1fr; }
+    
+    .cta-section h2 { font-size: 2.2rem; }
+    .section-padding { padding: 70px 0; }
+    
+    .hero-wave svg { height: 40px; }
+  }
+
+  @media (max-width: 480px) {
+    .hero h1 { font-size: 2.2rem; }
+    .section-title { font-size: 2rem; }
+    .btn { width: 100%; }
+    .modal-content { padding: 30px 24px; }
+  }
 </style>
 </head>
 <body>
 
-<header>
-  <nav>
-    <h1>🌈 Children's Ministry</h1>
-    <ul>
+<!-- ========== NAVBAR ========== -->
+<nav class="navbar" id="navbar">
+  <div class="container">
+    <a href="index.html" class="nav-brand">
+      <i class="fa-solid fa-rainbow"></i>
+      <span>Children's Ministry</span>
+    </a>
+
+    <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+
+    <ul class="nav-links" id="navLinks">
       <li><a href="index.html">Home</a></li>
       <li><a href="youth.html">Youth</a></li>
       <li><a href="women.html">Women</a></li>
       <li><a href="men.html">Men</a></li>
       <li><a href="pathfinder.html">Pathfinders</a></li>
     </ul>
-  </nav>
+  </div>
+</nav>
+
+<!-- ========== HERO SECTION ========== -->
+<header class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-content reveal">
+    <div class="hero-badge">Jesus Loves Me! 💖</div>
+    <h1>Growing in Faith & Fun</h1>
+    <div class="hero-verse">
+      "Let the little children come to me, and do not hinder them, for the kingdom of heaven belongs to such as these."
+      <strong>— Matthew 19:14</strong>
+    </div>
+    <button class="btn btn-primary" onclick="openJoinModal()">
+      Join the Fun! 🎉
+    </button>
+  </div>
+  
+  <div class="hero-wave">
+    <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+      <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" fill="#FFFDF7" opacity=".8"></path>
+      <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" fill="#FFFDF7" opacity=".5"></path>
+      <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" fill="#FFFDF7"></path>
+    </svg>
+  </div>
 </header>
 
-<div class="hero">
-  <h2 class="bounce">Jesus Loves Me! 💖</h2>
-  <p>"Let the little children come to me, and do not hinder them, for the kingdom of heaven belongs to such as these."</p>
-  <p style="margin-top: 10px; font-weight: bold;">— Matthew 19:14</p>
-</div>
+<!-- ========== BIBLE STORY SECTION ========== -->
+<section class="section-padding" id="story">
+  <div class="container">
+    <div class="text-center reveal">
+      <span class="section-label">Weekly Feature</span>
+      <h2 class="section-title">Today's Bible Story</h2>
+    </div>
 
-<div class="container">
-  <div class="bible-story">
-    <h3>📖 Today's Bible Story</h3>
-    <p class="story-text">
-      <strong>Noah's Big Boat!</strong> 🚢<br><br>
-      God told Noah to build a huge boat because a big flood was coming. Noah obeyed God even when others laughed. 
-      God sent animals two by two into the ark. Then it rained for 40 days and 40 nights! But Noah and his family 
-      were safe because they trusted God. After the flood, God put a beautiful rainbow in the sky as a promise! 🌈<br><br>
-      <em>Remember: God keeps His promises!</em>
-    </p>
-  </div>
-
-  <div class="activities">
-    <div class="activity-card" onclick="showActivity('Sabbath School')">
-      <div class="icon">📚</div>
-      <h3>Sabbath School</h3>
-      <p>Fun Bible stories & songs every Sabbath at 9:00 AM</p>
-    </div>
-    <div class="activity-card" onclick="showActivity('Vacation Bible School')">
-      <div class="icon">🎨</div>
-      <h3>VBS</h3>
-      <p>Exciting week-long program during holidays with crafts & games</p>
-    </div>
-    <div class="activity-card" onclick="showActivity('Singing')">
-      <div class="icon">🎵</div>
-      <h3>Kids Choir</h3>
-      <p>Sing praises to Jesus with our children's choir</p>
-    </div>
-    <div class="activity-card" onclick="showActivity('Games')">
-      <div class="icon">🎮</div>
-      <h3>Bible Games</h3>
-      <p>Learn Bible truths through fun games and quizzes</p>
-    </div>
-    <div class="activity-card" onclick="showActivity('Story Time')">
-      <div class="icon">📖</div>
-      <h3>Story Time</h3>
-      <p>Amazing Bible stories told with puppets and pictures</p>
-    </div>
-    <div class="activity-card" onclick="showActivity('Crafts')">
-      <div class="icon">✂️</div>
-      <h3>Crafts & Art</h3>
-      <p>Create beautiful art projects about God's love</p>
+    <div class="story-card reveal">
+      <div class="story-image">
+        <img src="https://images.unsplash.com/photo-1519689680058-324335c77eba?q=80&w=1000&auto=format&fit=crop" alt="Rainbow over water representing Noah's Ark">
+      </div>
+      <div class="story-content">
+        <h3><i class="fa-solid fa-ship"></i> Noah's Big Boat!</h3>
+        <p class="story-text">
+          God told Noah to build a huge boat because a big flood was coming. Noah obeyed God even when others laughed. 
+          God sent animals two by two into the ark. Then it rained for 40 days and 40 nights! But Noah and his family 
+          were safe because they trusted God. After the flood, God put a beautiful rainbow in the sky as a promise! 🌈
+        </p>
+        <div class="story-highlight">
+          💡 Remember: God keeps His promises!
+        </div>
+      </div>
     </div>
   </div>
+</section>
 
-  <div style="text-align: center; margin-top: 40px;">
-    <button class="fun-btn" onclick="joinKids()">Join the Fun! 🎉</button>
+<!-- ========== ACTIVITIES SECTION ========== -->
+<section class="section-padding bg-alt" id="activities">
+  <div class="container">
+    <div class="text-center reveal">
+      <span class="section-label">Get Involved</span>
+      <h2 class="section-title">Fun & Faith Activities</h2>
+      <p class="section-subtitle">Discover the exciting ways your child can learn, grow, and make friends in our ministry.</p>
+    </div>
+
+    <div class="activities-grid">
+      <div class="activity-card reveal" onclick="openActivityModal('Sabbath School')">
+        <div class="activity-icon"><i class="fa-solid fa-book-open"></i></div>
+        <h3>Sabbath School</h3>
+        <p>Fun Bible stories & songs every Sabbath at 9:00 AM</p>
+      </div>
+
+      <div class="activity-card reveal" onclick="openActivityModal('Vacation Bible School')">
+        <div class="activity-icon"><i class="fa-solid fa-palette"></i></div>
+        <h3>VBS</h3>
+        <p>Exciting week-long program during holidays with crafts & games</p>
+      </div>
+
+      <div class="activity-card reveal" onclick="openActivityModal('Singing')">
+        <div class="activity-icon"><i class="fa-solid fa-music"></i></div>
+        <h3>Kids Choir</h3>
+        <p>Sing praises to Jesus with our children's choir</p>
+      </div>
+
+      <div class="activity-card reveal" onclick="openActivityModal('Games')">
+        <div class="activity-icon"><i class="fa-solid fa-puzzle-piece"></i></div>
+        <h3>Bible Games</h3>
+        <p>Learn Bible truths through fun games and quizzes</p>
+      </div>
+
+      <div class="activity-card reveal" onclick="openActivityModal('Story Time')">
+        <div class="activity-icon"><i class="fa-solid fa-book-reader"></i></div>
+        <h3>Story Time</h3>
+        <p>Amazing Bible stories told with puppets and pictures</p>
+      </div>
+
+      <div class="activity-card reveal" onclick="openActivityModal('Crafts')">
+        <div class="activity-icon"><i class="fa-solid fa-scissors"></i></div>
+        <h3>Crafts & Art</h3>
+        <p>Create beautiful art projects about God's love</p>
+      </div>
+    </div>
   </div>
-</div>
+</section>
 
-<footer>
-  <p>&copy; 2026 Mfangano Central SDA Church - Children's Ministry</p>
-  <p>"Train up a child in the way he should go" - Proverbs 22:6</p>
+<!-- ========== CTA SECTION ========== -->
+<section class="cta-section">
+  <div class="container reveal">
+    <h2>Ready to Join the Adventure?</h2>
+    <p>Give your child the gift of faith, friendship, and fun. We can't wait to welcome them to our church family!</p>
+    <button class="btn btn-white" onclick="openJoinModal()">
+      Join the Fun! 🎉
+    </button>
+  </div>
+</section>
+
+<!-- ========== FOOTER ========== -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-verse">"Train up a child in the way he should go" — Proverbs 22:6</div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Mfangano Central SDA Church - Children's Ministry. All rights reserved.</p>
+    </div>
+  </div>
 </footer>
 
+<!-- ========== MODAL OVERLAY ========== -->
+<div class="modal-overlay" id="modalOverlay">
+  <div class="modal-content">
+    <button class="modal-close" onclick="closeModal()" aria-label="Close modal">&times;</button>
+    
+    <div id="modalBody">
+      <!-- Content injected via JavaScript -->
+    </div>
+  </div>
+</div>
+
+<!-- ========== JAVASCRIPT ========== -->
 <script>
-  function showActivity(activity) {
-    const messages = {
-      'Sabbath School': 'Sabbath School meets every week! We learn about Jesus through stories, songs, and activities. Bring your Bible and a smile!',
-      'Vacation Bible School': 'VBS is our special holiday program! A whole week of Bible stories, crafts, games, and making new friends. Watch for announcements!',
-      'Singing': 'Our Kids Choir sings every Sabbath! Practice is on Friday afternoons. Come sing happy songs to Jesus!',
-      'Games': 'We play Bible games every Sabbath! Memory verses, Bible trivia, and fun activities. Learning God\'s Word is fun!',
-      'Story Time': 'Story time is the best! We hear amazing stories from the Bible with pictures and puppets. Jesus loves children!',
-      'Crafts': 'We make beautiful crafts every week! Coloring, cutting, and creating art about God\'s love. Take home something special!'
-    };
-    alert(`${activity}\n\n${messages[activity]}\n\nSee you there! 🌟`);
-  }
-  
-  function joinKids() {
-    const name = prompt("What's your name, little friend?");
-    if (name) {
-      alert(`Hi ${name}! 🎈\n\nWelcome to Children's Ministry!\nJesus loves you so much!\n\nSee you this Sabbath at 9:00 AM!\n\n🌟🎨📚🎵`);
+  // 1. Navbar Scroll Effect
+  const navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) {
+      navbar.classList.add('scrolled');
+    } else {
+      navbar.classList.remove('scrolled');
     }
-  }
-  
-  // Add fun animations
-  document.querySelectorAll('.activity-card').forEach((card, index) => {
-    card.style.animation = `fadeIn 0.5s ease-out ${index * 0.1}s both`;
   });
+
+  // 2. Mobile Menu Toggle
+  const hamburger = document.getElementById('hamburger');
+  const navLinks = document.getElementById('navLinks');
+  
+  hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+  });
+
+  document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+      navLinks.classList.remove('active');
+    });
+  });
+
+  // 3. Scroll Reveal Animation
+  const revealElements = document.querySelectorAll('.reveal');
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15 });
+
+  revealElements.forEach(el => revealObserver.observe(el));
+
+  // 4. Modal Logic (Preserving Original Content & Functionality)
+  const modalOverlay = document.getElementById('modalOverlay');
+  const modalBody = document.getElementById('modalBody');
+
+  const activityMessages = {
+    'Sabbath School': 'Sabbath School meets every week! We learn about Jesus through stories, songs, and activities. Bring your Bible and a smile! 📚',
+    'Vacation Bible School': 'VBS is our special holiday program! A whole week of Bible stories, crafts, games, and making new friends. Watch for announcements! 🎨',
+    'Singing': 'Our Kids Choir sings every Sabbath! Practice is on Friday afternoons. Come sing happy songs to Jesus! 🎵',
+    'Games': 'We play Bible games every Sabbath! Memory verses, Bible trivia, and fun activities. Learning God\'s Word is fun! 🎮',
+    'Story Time': 'Story time is the best! We hear amazing stories from the Bible with pictures and puppets. Jesus loves children! 📖',
+    'Crafts': 'We make beautiful crafts every week! Coloring, cutting, and creating art about God\'s love. Take home something special! ✂️'
+  };
+
+  function openActivityModal(activity) {
+    const message = activityMessages[activity];
+    if (!message) return;
+
+    modalBody.innerHTML = `
+      <div class="modal-icon">🌟</div>
+      <h3>${activity}</h3>
+      <p>${message}</p>
+      <p style="font-size: 0.9rem; color: var(--color-primary); font-weight: 600;">See you there!</p>
+      <button class="btn btn-primary" style="width: 100%; margin-top: 10px;" onclick="closeModal()">Awesome!</button>
+    `;
+    modalOverlay.classList.add('active');
+    document.body.style.overflow = 'hidden'; // Prevent background scrolling
+  }
+
+  function openJoinModal() {
+    modalBody.innerHTML = `
+      <div class="modal-icon">🎈</div>
+      <h3>Join the Fun!</h3>
+      <p>We'd love to know your name, little friend!</p>
+      <form onsubmit="handleJoinSubmit(event)">
+        <div class="form-group">
+          <label for="childName">What's your name?</label>
+          <input type="text" id="childName" required placeholder="e.g., Sarah">
+        </div>
+        <button type="submit" class="btn btn-primary" style="width: 100%;">Let's Go! 🚀</button>
+      </form>
+    `;
+    modalOverlay.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeModal() {
+    modalOverlay.classList.remove('active');
+    document.body.style.overflow = ''; // Restore scrolling
+  }
+
+  // Close modal when clicking outside the content
+  modalOverlay.addEventListener('click', (e) => {
+    if (e.target === modalOverlay) {
+      closeModal();
+    }
+  });
+
+  // Close modal on Escape key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modalOverlay.classList.contains('active')) {
+      closeModal();
+    }
+  });
+
+  function handleJoinSubmit(event) {
+    event.preventDefault();
+    const name = document.getElementById('childName').value;
+    
+    modalBody.innerHTML = `
+      <div class="modal-icon">🎉</div>
+      <h3>Hi ${name}!</h3>
+      <p>Welcome to Children's Ministry!<br>Jesus loves you so much!</p>
+      <div style="background: var(--color-bg-alt); padding: 20px; border-radius: 12px; margin: 20px 0;">
+        <p style="margin: 0; font-weight: 600; color: var(--color-text);">See you this Sabbath at 9:00 AM!</p>
+        <p style="margin: 10px 0 0 0; font-size: 1.5rem;">🌟 🎨 📚 🎵</p>
+      </div>
+      <button class="btn btn-secondary" style="width: 100%;" onclick="closeModal()">Yay!</button>
+    `;
+  }
 </script>
 
 </body>
