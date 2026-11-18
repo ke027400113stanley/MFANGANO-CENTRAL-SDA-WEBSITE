@@ -317,9 +317,10 @@
             left: 0;
             width: 100%;
             height: 100%;
+            /* Updated to a reliable, beautiful church exterior image */
             background: 
                 linear-gradient(to bottom, rgba(30, 58, 47, 0.65), rgba(26, 26, 29, 0.85)),
-                url('https://www.linkedin.com/feed/?shareActive=true&text=Vibrant%20Campus%20Building%20with%20101%20Sign&url=https%3A%2F%2Fchatgpt.com%2Fs%2Fm_6aec7bc1b8ac81918dd3b389c700a604&shareUrl=https%3A%2F%2Fchatgpt.com%2Fs%2Fm_6aec7bc1b8ac81918dd3b389c700a604&linkOrigin=LI_BADGE') center center / cover no-repeat;
+                url("church.png") center center / cover no-repeat;
             z-index: -1;
             animation: slowZoom 20s ease-in-out infinite alternate;
         }
@@ -556,7 +557,7 @@
         }
 
         .sermon-image {
-            height: 200px;
+            height: 220px; /* Slightly taller for better splash image presence */
             background-color: var(--color-deep-grey);
             position: relative;
             overflow: hidden;
@@ -566,35 +567,13 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
-            opacity: 0.8;
+            opacity: 0.85;
             transition: var(--transition);
         }
         
         .sermon-card:hover .sermon-image img {
             opacity: 1;
             transform: scale(1.05);
-        }
-
-        .play-overlay {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 50px;
-            height: 50px;
-            background-color: var(--color-gold);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--color-charcoal);
-            font-size: 1.2rem;
-            opacity: 0;
-            transition: var(--transition);
-        }
-
-        .sermon-card:hover .play-overlay {
-            opacity: 1;
         }
 
         .sermon-content {
@@ -707,6 +686,7 @@
             grid-template-columns: 1.5fr 1fr 1fr 1fr;
             gap: 48px;
             margin-bottom: 60px;
+            align-items: start; /* Ensures columns don't stretch weirdly */
         }
 
         .footer-brand .main-title {
@@ -728,7 +708,7 @@
         .footer-brand p {
             font-size: 0.95rem;
             line-height: 1.8;
-            margin-bottom: 24px;
+            margin-bottom: 12px;
         }
 
         .footer h4 {
@@ -746,7 +726,8 @@
         }
 
         .footer-links li {
-            margin-bottom: 12px;
+            margin-bottom: 14px;
+            line-height: 1.5;
         }
 
         .footer-links a {
@@ -761,7 +742,8 @@
 
         .social-links {
             display: flex;
-            gap: 16px;
+            flex-wrap: wrap;
+            gap: 12px;
             margin-top: 24px;
         }
 
@@ -775,17 +757,19 @@
             justify-content: center;
             color: var(--color-ivory);
             transition: var(--transition);
+            font-size: 1.1rem;
         }
 
         .social-links a:hover {
             background-color: var(--color-gold);
             border-color: var(--color-gold);
             color: var(--color-charcoal);
+            transform: translateY(-3px);
         }
 
         .footer-bottom {
             border-top: 1px solid rgba(255, 255, 255, 0.08);
-            padding: 24px 0;
+            padding: 32px 0;
             text-align: center;
             font-size: 0.85rem;
             color: rgba(253, 252, 248, 0.4);
@@ -886,7 +870,7 @@
             <p>A vibrant Seventh-day Adventist community on the shores of Lake Victoria, committed to following Jesus and serving our neighbors with compassion.</p>
             <div class="hero-buttons">
                 <a href="#services" class="btn btn-primary">Join Us This Sabbath</a>
-                <a href="#sermons" class="btn btn-outline">Watch Latest Sermon</a>
+                <a href="#sermons" class="btn btn-outline">View Latest Sermon</a>
             </div>
         </div>
         <div class="scroll-indicator">
@@ -992,8 +976,7 @@
             <div class="sermons-grid">
                 <div class="sermon-card reveal">
                     <div class="sermon-image">
-                        <img src="https://images.unsplash.com/photo-1445445290350-18a3b86e0b5a?q=80&w=2070&auto=format&fit=crop" alt="Sermon">
-                        <div class="play-overlay"><i class="fa-solid fa-play"></i></div>
+                        <img src="https://images.unsplash.com/photo-1445445290350-18a3b86e0b5a?q=80&w=2070&auto=format&fit=crop" alt="Sermon Splash Image">
                     </div>
                     <div class="sermon-content">
                         <span class="sermon-meta">March 21, 2026</span>
@@ -1005,8 +988,7 @@
 
                 <div class="sermon-card reveal">
                     <div class="sermon-image">
-                        <img src="https://images.unsplash.com/photo-1504052434569-70ad5836ab65?q=80&w=2070&auto=format&fit=crop" alt="Sermon">
-                        <div class="play-overlay"><i class="fa-solid fa-play"></i></div>
+                        <img src="https://images.unsplash.com/photo-1504052434569-70ad5836ab65?q=80&w=2070&auto=format&fit=crop" alt="Sermon Splash Image">
                     </div>
                     <div class="sermon-content">
                         <span class="sermon-meta">March 14, 2026</span>
@@ -1018,8 +1000,7 @@
 
                 <div class="sermon-card reveal">
                     <div class="sermon-image">
-                        <img src="https://images.unsplash.com/photo-1490127252417-7c393f993ee4?q=80&w=2070&auto=format&fit=crop" alt="Sermon">
-                        <div class="play-overlay"><i class="fa-solid fa-play"></i></div>
+                        <img src="https://images.unsplash.com/photo-1490127252417-7c393f993ee4?q=80&w=2070&auto=format&fit=crop" alt="Sermon Splash Image">
                     </div>
                     <div class="sermon-content">
                         <span class="sermon-meta">March 7, 2026</span>
@@ -1053,18 +1034,19 @@
                     <span class="main-title">Mfangano Central</span>
                     <span class="sub-title">Seventh-day Adventist Church</span>
                     <p>Mfangano Island, Lake Victoria,<br>Homa Bay County, Kenya</p>
-                    <p><i class="fa-solid fa-phone" style="color: var(--color-gold); margin-right: 8px;"></i> +254 712 345 678<br>
-                    <i class="fa-solid fa-envelope" style="color: var(--color-gold); margin-right: 8px;"></i> info@mfanganocentralsda.org</p>
+                    <p>
+                        <i class="fa-solid fa-phone" style="color: var(--color-gold); margin-right: 8px;"></i> +254 712 345 678<br>
+                        <i class="fa-solid fa-envelope" style="color: var(--color-gold); margin-right: 8px;"></i> info@mfanganocentralsda.org
+                    </p>
                     
+                    <!-- Cleaned up social links: Removed invalid <ul> and emojis, replaced with proper Font Awesome brand icons -->
                     <div class="social-links">
-                         <ul>
-                        <a href="https://facebook.com/mfanganocentralsda" target="_blank" title="Facebook">📘</a>
-                        <a href="https://youtube.com/mfanganocentralsda" target="_blank" title="YouTube">▶️</a>
-                        <a href="https://instagram.com/mfanganocentralsda" target="_blank" title="Instagram">ig</a>
-                        <a href="https://twitter.com/mfanganocentra" target="_blank" title="Twitter">🐦</a>
-                        <a href="https://whatsapp.com" target="_blank" title="WhatsApp">💬</a>
-                        <a href="https://tiktok.com/@mfanganocentra" target="_blank" title="TikTok">🎵</a>
-                </ul>
+                        <a href="https://facebook.com/mfanganocentralsda" target="_blank" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="https://youtube.com/mfanganocentralsda" target="_blank" title="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="https://instagram.com/mfanganocentralsda" target="_blank" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://twitter.com/mfanganocentra" target="_blank" title="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="https://whatsapp.com" target="_blank" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                        <a href="https://tiktok.com/@mfanganocentra" target="_blank" title="TikTok"><i class="fa-brands fa-tiktok"></i></a>
                     </div>
                 </div>
 
@@ -1072,10 +1054,10 @@
                     <h4>Quick Links</h4>
                     <ul class="footer-links">
                         <li><a href="about.html">About Us</a></li>
-                        <li><a href="ministries">Ministries</a></li>
+                        <li><a href="ministries.html">Ministries</a></li>
                         <li><a href="sermons.html">Sermons</a></li>
-                        <li><a href="contacts.html">Give Online</a></li>
-                        <li><a href="outreach.html">Prayer Request</a></li>
+                        <li><a href="give.html">Give Online</a></li>
+                        <li><a href="contact.html">Prayer Request</a></li>
                     </ul>
                 </div>
 
@@ -1204,4 +1186,3 @@
     </script>
 </body>
 </html>
-
