@@ -396,7 +396,64 @@
   }
 
   /* =========================================
-     6. ACTIVITIES SECTION
+     6. SPLASH VERSE SECTIONS
+     ========================================= */
+  .splash-section {
+    position: relative;
+    padding: 140px 0;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+  }
+
+  .splash-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(45, 52, 54, 0.5), rgba(45, 52, 54, 0.7));
+    z-index: 1;
+  }
+
+  .splash-content {
+    position: relative;
+    z-index: 2;
+    max-width: 850px;
+    padding: 0 24px;
+  }
+
+  .splash-verse {
+    font-family: var(--font-heading);
+    font-size: 2.2rem;
+    font-style: italic;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    text-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  }
+
+  .splash-reference {
+    font-family: var(--font-body);
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--color-accent);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    background: rgba(255, 255, 255, 0.1);
+    display: inline-block;
+    padding: 8px 20px;
+    border-radius: 50px;
+    backdrop-filter: blur(4px);
+  }
+
+  /* =========================================
+     7. ACTIVITIES SECTION
      ========================================= */
   .activities-grid {
     display: grid;
@@ -472,7 +529,7 @@
   }
 
   /* =========================================
-     7. CTA SECTION
+     8. CTA SECTION
      ========================================= */
   .cta-section {
     background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
@@ -527,31 +584,128 @@
   }
 
   /* =========================================
-     8. FOOTER
+     9. EXPANDED FOOTER
      ========================================= */
   .footer {
-    background-color: var(--color-text);
+    background-color: #1a1e20;
     color: rgba(255, 255, 255, 0.7);
-    padding: 60px 0 0;
+    padding: 80px 0 0;
+  }
+
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1.2fr;
+    gap: 48px;
+    margin-bottom: 60px;
+  }
+
+  .footer-col h4 {
+    color: white;
+    font-size: 1.2rem;
+    margin-bottom: 24px;
+    position: relative;
+    display: inline-block;
+  }
+
+  .footer-col h4::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 40px;
+    height: 3px;
+    background-color: var(--color-primary);
+    border-radius: 2px;
+  }
+
+  .footer-col p {
+    line-height: 1.8;
+    margin-bottom: 16px;
+  }
+
+  .footer-links {
+    list-style: none;
+  }
+
+  .footer-links li {
+    margin-bottom: 14px;
+  }
+
+  .footer-links a {
+    color: rgba(255, 255, 255, 0.7);
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.95rem;
+  }
+
+  .footer-links a:hover {
+    color: var(--color-primary);
+    transform: translateX(6px);
+  }
+
+  .social-links {
+    display: flex;
+    gap: 16px;
+    margin-top: 24px;
+  }
+
+  .social-link {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.3rem;
+    transition: var(--transition);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .social-link:hover {
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(255, 126, 103, 0.3);
+  }
+
+  .footer-verse-box {
+    background: linear-gradient(135deg, rgba(255, 126, 103, 0.1), rgba(255, 213, 79, 0.05));
+    border-left: 4px solid var(--color-accent);
+    padding: 24px;
+    border-radius: 0 16px 16px 0;
+    margin-bottom: 50px;
     text-align: center;
   }
 
-  .footer-verse {
+  .footer-verse-text {
     font-family: var(--font-heading);
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     font-style: italic;
+    color: white;
+    margin-bottom: 8px;
+    line-height: 1.5;
+  }
+
+  .footer-verse-ref {
     color: var(--color-accent);
-    margin-bottom: 24px;
+    font-weight: 700;
+    font-size: 0.95rem;
+    letter-spacing: 1px;
   }
 
   .footer-bottom {
     border-top: 1px solid rgba(255, 255, 255, 0.1);
-    padding: 24px 0;
+    padding: 28px 0;
+    text-align: center;
     font-size: 0.9rem;
   }
 
   /* =========================================
-     9. MODAL
+     10. MODAL
      ========================================= */
   .modal-overlay {
     position: fixed;
@@ -656,12 +810,14 @@
   }
 
   /* =========================================
-     10. RESPONSIVE DESIGN
+     11. RESPONSIVE DESIGN
      ========================================= */
   @media (max-width: 1024px) {
     .hero h1 { font-size: 3.2rem; }
     .section-title { font-size: 2.4rem; }
     .activities-grid { grid-template-columns: repeat(2, 1fr); }
+    .footer-grid { grid-template-columns: 1fr 1fr; }
+    .splash-verse { font-size: 1.8rem; }
   }
 
   @media (max-width: 768px) {
@@ -696,8 +852,16 @@
     
     .cta-section h2 { font-size: 2.2rem; }
     .section-padding { padding: 70px 0; }
-    
     .hero-wave svg { height: 40px; }
+
+    .splash-section { padding: 100px 0; background-attachment: scroll; }
+    .splash-verse { font-size: 1.5rem; }
+    
+    .footer-grid { grid-template-columns: 1fr; gap: 40px; text-align: center; }
+    .footer-col h4::after { left: 50%; transform: translateX(-50%); }
+    .footer-links a { justify-content: center; }
+    .social-links { justify-content: center; }
+    .footer-verse-box { padding: 20px; }
   }
 
   @media (max-width: 480px) {
@@ -783,6 +947,15 @@
   </div>
 </section>
 
+<!-- ========== SPLASH VERSE 1 ========== -->
+<section class="splash-section" style="background-image: url('https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?q=80&w=2070&auto=format&fit=crop');">
+  <div class="splash-overlay"></div>
+  <div class="splash-content reveal">
+    <div class="splash-verse">"Your word is a lamp for my feet, a light on my path."</div>
+    <div class="splash-reference">— Psalm 119:105</div>
+  </div>
+</section>
+
 <!-- ========== ACTIVITIES SECTION ========== -->
 <section class="section-padding bg-alt" id="activities">
   <div class="container">
@@ -832,6 +1005,15 @@
   </div>
 </section>
 
+<!-- ========== SPLASH VERSE 2 ========== -->
+<section class="splash-section" style="background-image: url('https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?q=80&w=2070&auto=format&fit=crop');">
+  <div class="splash-overlay"></div>
+  <div class="splash-content reveal">
+    <div class="splash-verse">"For I know the plans I have for you,” declares the Lord, “plans to prosper you and not to harm you, plans to give you hope and a future."</div>
+    <div class="splash-reference">— Jeremiah 29:11</div>
+  </div>
+</section>
+
 <!-- ========== CTA SECTION ========== -->
 <section class="cta-section">
   <div class="container reveal">
@@ -843,12 +1025,78 @@
   </div>
 </section>
 
-<!-- ========== FOOTER ========== -->
+<!-- ========== SPLASH VERSE 3 ========== -->
+<section class="splash-section" style="background-image: url('https://images.unsplash.com/photo-1504052434569-70ad5836ab65?q=80&w=2070&auto=format&fit=crop');">
+  <div class="splash-overlay"></div>
+  <div class="splash-content reveal">
+    <div class="splash-verse">"Have I not commanded you? Be strong and courageous. Do not be afraid; do not be discouraged, for the Lord your God will be with you wherever you go."</div>
+    <div class="splash-reference">— Joshua 1:9</div>
+  </div>
+</section>
+
+<!-- ========== EXPANDED FOOTER ========== -->
 <footer class="footer">
   <div class="container">
-    <div class="footer-verse">"Train up a child in the way he should go" — Proverbs 22:6</div>
+    
+    <div class="footer-verse-box reveal">
+      <div class="footer-verse-text">"Train up a child in the way he should go, and when he is old he will not depart from it."</div>
+      <div class="footer-verse-ref">— Proverbs 22:6</div>
+    </div>
+
+    <div class="footer-grid">
+      <!-- Column 1: About & Social -->
+      <div class="footer-col reveal">
+        <a href="index.html" class="nav-brand" style="color: white; margin-bottom: 20px; display: inline-flex;">
+          <i class="fa-solid fa-rainbow" style="color: var(--color-accent);"></i>
+          <span>Children's Ministry</span>
+        </a>
+        <p>Providing a fun, safe, and loving environment for children to learn about Jesus, build strong friendships, and grow in their faith at Mfangano Central SDA Church.</p>
+        <div class="social-links">
+          <a href="#" class="social-link" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" class="social-link" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" class="social-link" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          <a href="#" class="social-link" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+      </div>
+
+      <!-- Column 2: Quick Links -->
+      <div class="footer-col reveal">
+        <h4>Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="index.html"><i class="fa-solid fa-chevron-right"></i> Home</a></li>
+          <li><a href="youth.html"><i class="fa-solid fa-chevron-right"></i> Youth Ministry</a></li>
+          <li><a href="women.html"><i class="fa-solid fa-chevron-right"></i> Women's Ministry</a></li>
+          <li><a href="men.html"><i class="fa-solid fa-chevron-right"></i> Men's Ministry</a></li>
+          <li><a href="pathfinder.html"><i class="fa-solid fa-chevron-right"></i> Pathfinders</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 3: Resources -->
+      <div class="footer-col reveal">
+        <h4>Resources</h4>
+        <ul class="footer-links">
+          <li><a href="#"><i class="fa-solid fa-chevron-right"></i> Sabbath School Lessons</a></li>
+          <li><a href="#"><i class="fa-solid fa-chevron-right"></i> Memory Verses</a></li>
+          <li><a href="#"><i class="fa-solid fa-chevron-right"></i> Parent's Guide</a></li>
+          <li><a href="#"><i class="fa-solid fa-chevron-right"></i> Event Calendar</a></li>
+          <li><a href="#"><i class="fa-solid fa-chevron-right"></i> Volunteer Sign-up</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 4: Contact -->
+      <div class="footer-col reveal">
+        <h4>Contact Us</h4>
+        <ul class="footer-links">
+          <li><a href="#"><i class="fa-solid fa-location-dot"></i> Mfangano Central SDA Church, Kenya</a></li>
+          <li><a href="tel:+254700000000"><i class="fa-solid fa-phone"></i> +254 700 000 000</a></li>
+          <li><a href="mailto:children@mfanganocentral.org"><i class="fa-solid fa-envelope"></i> children@mfanganocentral.org</a></li>
+          <li><a href="#"><i class="fa-solid fa-clock"></i> Sabbath: 9:00 AM - 1:00 PM</a></li>
+        </ul>
+      </div>
+    </div>
+
     <div class="footer-bottom">
-      <p>&copy; 2026 Mfangano Central SDA Church - Children's Ministry. All rights reserved.</p>
+      <p>&copy; 2026 Mfangano Central SDA Church - Children's Ministry. All rights reserved. | Made with 💖 for the little ones.</p>
     </div>
   </div>
 </footer>

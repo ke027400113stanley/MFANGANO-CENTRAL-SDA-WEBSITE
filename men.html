@@ -16,18 +16,18 @@
 
 <style>
   /* =========================================
-     1. CSS VARIABLES & RESET
+     1. CSS VARIABLES & RESET (New Palette)
      ========================================= */
   :root {
-    --color-ivory: #FDFCF8;
-    --color-ivory-dark: #F4F1EA;
-    --color-charcoal: #1A1A1D;
-    --color-deep-grey: #2D2D30;
-    --color-forest-green: #1E3A2F;
-    --color-gold: #C5A059;
-    --color-gold-light: #E0C080;
-    --color-text: #333333;
-    --color-text-light: #6B6B6B;
+    --color-bg: #F8FAFC; /* Crisp Off-White */
+    --color-bg-alt: #F1F5F9; /* Soft Slate */
+    --color-primary: #0F172A; /* Deep Navy */
+    --color-primary-light: #1E293B; /* Slate 800 */
+    --color-accent: #D97706; /* Warm Amber/Gold */
+    --color-accent-light: #F59E0B; /* Bright Amber */
+    --color-text: #1E293B; /* Dark Slate */
+    --color-text-light: #64748B; /* Medium Slate */
+    --color-white: #FFFFFF;
     
     --font-heading: 'Cormorant Garamond', serif;
     --font-body: 'Inter', sans-serif;
@@ -37,12 +37,11 @@
   }
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
-  
   html { scroll-behavior: smooth; }
 
   body { 
     font-family: var(--font-body);
-    background-color: var(--color-ivory);
+    background-color: var(--color-bg);
     color: var(--color-text);
     line-height: 1.7;
     overflow-x: hidden;
@@ -51,7 +50,7 @@
   h1, h2, h3, h4 {
     font-family: var(--font-heading);
     font-weight: 700;
-    color: var(--color-charcoal);
+    color: var(--color-primary);
     line-height: 1.2;
   }
 
@@ -69,9 +68,9 @@
      ========================================= */
   .section-padding { padding: 100px 0; }
   .text-center { text-align: center; }
-  .bg-ivory-dark { background-color: var(--color-ivory-dark); }
-  .bg-forest { background-color: var(--color-forest-green); color: var(--color-ivory); }
-  .bg-forest h2, .bg-forest h3 { color: var(--color-ivory); }
+  .bg-alt { background-color: var(--color-bg-alt); }
+  .bg-primary { background-color: var(--color-primary); color: var(--color-white); }
+  .bg-primary h2, .bg-primary h3 { color: var(--color-white); }
 
   .section-label {
     font-family: var(--font-body);
@@ -79,7 +78,7 @@
     font-weight: 600;
     letter-spacing: 3px;
     text-transform: uppercase;
-    color: var(--color-gold);
+    color: var(--color-accent);
     margin-bottom: 16px;
     display: block;
   }
@@ -99,8 +98,8 @@
 
   .divider {
     width: 60px;
-    height: 2px;
-    background-color: var(--color-gold);
+    height: 3px;
+    background-color: var(--color-accent);
     margin: 0 auto 32px;
   }
 
@@ -127,40 +126,40 @@
     font-weight: 600;
     letter-spacing: 1px;
     text-transform: uppercase;
-    border-radius: 2px;
+    border-radius: 4px;
     cursor: pointer;
     transition: var(--transition);
     border: 2px solid transparent;
   }
 
   .btn-primary {
-    background-color: var(--color-gold);
-    color: var(--color-charcoal);
+    background-color: var(--color-accent);
+    color: var(--color-white);
   }
   .btn-primary:hover {
-    background-color: var(--color-gold-light);
-    transform: translateY(-2px);
-    box-shadow: 0 10px 30px rgba(197, 160, 89, 0.3);
+    background-color: var(--color-accent-light);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(217, 119, 6, 0.3);
   }
 
   .btn-outline {
     background-color: transparent;
-    border-color: var(--color-ivory);
-    color: var(--color-ivory);
+    border-color: var(--color-white);
+    color: var(--color-white);
   }
   .btn-outline:hover {
-    background-color: var(--color-ivory);
-    color: var(--color-forest-green);
+    background-color: var(--color-white);
+    color: var(--color-primary);
   }
 
   .btn-outline-dark {
     background-color: transparent;
-    border-color: var(--color-charcoal);
-    color: var(--color-charcoal);
+    border-color: var(--color-primary);
+    color: var(--color-primary);
   }
   .btn-outline-dark:hover {
-    background-color: var(--color-charcoal);
-    color: var(--color-ivory);
+    background-color: var(--color-primary);
+    color: var(--color-white);
   }
 
   /* =========================================
@@ -178,8 +177,8 @@
   }
 
   .navbar.scrolled {
-    background: rgba(253, 252, 248, 0.95);
-    backdrop-filter: blur(10px);
+    background: rgba(248, 250, 252, 0.95);
+    backdrop-filter: blur(12px);
     padding: 16px 0;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
   }
@@ -200,7 +199,8 @@
     font-family: var(--font-heading);
     font-size: 1.5rem;
     font-weight: 700;
-    color: var(--color-ivory);
+    color: var(--color-white);
+    transition: var(--transition);
   }
 
   .nav-brand .sub-title {
@@ -209,11 +209,11 @@
     font-weight: 600;
     letter-spacing: 2px;
     text-transform: uppercase;
-    color: var(--color-gold);
+    color: var(--color-accent);
     margin-top: 2px;
   }
 
-  .navbar.scrolled .nav-brand .main-title { color: var(--color-charcoal); }
+  .navbar.scrolled .nav-brand .main-title { color: var(--color-primary); }
 
   .nav-links {
     display: flex;
@@ -235,25 +235,25 @@
     bottom: -4px;
     left: 0;
     width: 0;
-    height: 1px;
-    background-color: var(--color-gold);
+    height: 2px;
+    background-color: var(--color-accent);
     transition: var(--transition);
   }
 
   .nav-links a:hover::after { width: 100%; }
-  .nav-links a:hover { color: var(--color-ivory); }
+  .nav-links a:hover { color: var(--color-white); }
 
-  .navbar.scrolled .nav-links a { color: var(--color-charcoal); }
-  .navbar.scrolled .nav-links a:hover { color: var(--color-forest-green); }
+  .navbar.scrolled .nav-links a { color: var(--color-text); }
+  .navbar.scrolled .nav-links a:hover { color: var(--color-accent); }
 
   .nav-cta {
     padding: 10px 24px !important;
-    background-color: var(--color-gold);
-    color: var(--color-charcoal) !important;
-    border-radius: 2px;
+    background-color: var(--color-accent);
+    color: var(--color-white) !important;
+    border-radius: 4px;
   }
   .nav-cta::after { display: none !important; }
-  .nav-cta:hover { background-color: var(--color-gold-light) !important; }
+  .nav-cta:hover { background-color: var(--color-accent-light) !important; }
 
   .hamburger {
     display: none;
@@ -268,10 +268,10 @@
     display: block;
     width: 28px;
     height: 2px;
-    background-color: var(--color-ivory);
+    background-color: var(--color-white);
     transition: var(--transition);
   }
-  .navbar.scrolled .hamburger span { background-color: var(--color-charcoal); }
+  .navbar.scrolled .hamburger span { background-color: var(--color-primary); }
 
   /* =========================================
      4. HERO SECTION
@@ -293,10 +293,10 @@
     width: 100%;
     height: 100%;
     background: 
-      linear-gradient(to bottom, rgba(30, 58, 47, 0.75), rgba(26, 26, 29, 0.9)),
+      linear-gradient(to bottom, rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.9)),
       url('https://images.unsplash.com/photo-1529070538774-1843cb3265df?q=80&w=2070&auto=format&fit=crop') center center / cover no-repeat;
     z-index: -1;
-    animation: slowZoom 20s ease-in-out infinite alternate;
+    animation: slowZoom 25s ease-in-out infinite alternate;
   }
 
   @keyframes slowZoom {
@@ -305,7 +305,7 @@
   }
 
   .hero-content {
-    max-width: 800px;
+    max-width: 850px;
     padding: 0 24px;
     z-index: 2;
   }
@@ -316,9 +316,9 @@
     font-weight: 600;
     letter-spacing: 4px;
     text-transform: uppercase;
-    color: var(--color-gold);
+    color: var(--color-accent);
     margin-bottom: 24px;
-    border: 1px solid rgba(197, 160, 89, 0.4);
+    border: 1px solid rgba(217, 119, 6, 0.4);
     padding: 8px 24px;
     border-radius: 50px;
     backdrop-filter: blur(4px);
@@ -326,7 +326,7 @@
 
   .hero h1 {
     font-size: 4.5rem;
-    color: var(--color-ivory);
+    color: var(--color-white);
     margin-bottom: 24px;
     font-weight: 700;
     line-height: 1.1;
@@ -334,14 +334,14 @@
 
   .hero h1 span {
     font-style: italic;
-    color: var(--color-gold-light);
+    color: var(--color-accent-light);
   }
 
   .hero-verse {
     font-family: var(--font-heading);
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     font-style: italic;
-    color: rgba(253, 252, 248, 0.9);
+    color: rgba(255, 255, 255, 0.9);
     margin-bottom: 40px;
     line-height: 1.6;
   }
@@ -352,7 +352,7 @@
     font-family: var(--font-body);
     font-size: 0.9rem;
     font-style: normal;
-    color: var(--color-gold);
+    color: var(--color-accent);
     letter-spacing: 1px;
   }
 
@@ -371,7 +371,66 @@
   }
 
   /* =========================================
-     5. MISSION SECTION
+     5. SPLASH VERSE SECTIONS
+     ========================================= */
+  .splash-section {
+    position: relative;
+    padding: 160px 0;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--color-white);
+  }
+
+  .splash-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.75));
+    z-index: 1;
+  }
+
+  .splash-content {
+    position: relative;
+    z-index: 2;
+    max-width: 850px;
+    padding: 0 24px;
+  }
+
+  .splash-verse {
+    font-family: var(--font-heading);
+    font-size: 2.4rem;
+    font-style: italic;
+    line-height: 1.4;
+    margin-bottom: 24px;
+    color: var(--color-white);
+    text-shadow: 0 4px 20px rgba(0,0,0,0.3);
+  }
+
+  .splash-reference {
+    font-family: var(--font-body);
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--color-accent);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    background: rgba(255, 255, 255, 0.1);
+    display: inline-block;
+    padding: 10px 24px;
+    border-radius: 4px;
+    border: 1px solid rgba(217, 119, 6, 0.3);
+    backdrop-filter: blur(4px);
+  }
+
+  /* =========================================
+     6. MISSION SECTION
      ========================================= */
   .mission-grid {
     display: grid;
@@ -382,9 +441,9 @@
 
   .mission-image {
     position: relative;
-    border-radius: 4px;
+    border-radius: 8px;
     overflow: hidden;
-    box-shadow: 0 30px 60px rgba(30, 58, 47, 0.15);
+    box-shadow: 0 30px 60px rgba(15, 23, 42, 0.15);
   }
 
   .mission-image img {
@@ -402,8 +461,8 @@
     left: -20px;
     width: 100%;
     height: 100%;
-    border: 2px solid var(--color-gold);
-    border-radius: 4px;
+    border: 3px solid var(--color-accent);
+    border-radius: 8px;
     z-index: -1;
   }
 
@@ -420,18 +479,19 @@
   }
 
   .mission-quote {
-    border-left: 3px solid var(--color-gold);
-    padding: 20px 24px;
-    background-color: var(--color-ivory-dark);
+    border-left: 4px solid var(--color-accent);
+    padding: 24px;
+    background-color: var(--color-bg-alt);
     margin-top: 32px;
     font-family: var(--font-heading);
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     font-style: italic;
-    color: var(--color-forest-green);
+    color: var(--color-primary);
+    border-radius: 0 8px 8px 0;
   }
 
   /* =========================================
-     6. PROGRAMS SECTION
+     7. PROGRAMS SECTION
      ========================================= */
   .programs-grid {
     display: grid;
@@ -440,9 +500,9 @@
   }
 
   .program-card {
-    background-color: #fff;
+    background-color: var(--color-white);
     padding: 40px 32px;
-    border-radius: 4px;
+    border-radius: 8px;
     border: 1px solid rgba(0,0,0,0.04);
     transition: var(--transition);
     position: relative;
@@ -450,6 +510,7 @@
     display: flex;
     flex-direction: column;
     height: 100%;
+    cursor: pointer;
   }
 
   .program-card::before {
@@ -458,36 +519,37 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 3px;
-    background-color: var(--color-gold);
+    height: 4px;
+    background-color: var(--color-accent);
     transform: scaleX(0);
     transition: transform 0.4s ease;
   }
 
   .program-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 20px 40px rgba(30, 58, 47, 0.08);
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(15, 23, 42, 0.1);
   }
 
   .program-card:hover::before { transform: scaleX(1); }
 
   .program-icon {
-    width: 60px;
-    height: 60px;
-    background-color: var(--color-ivory-dark);
+    width: 64px;
+    height: 64px;
+    background-color: var(--color-bg-alt);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 1.5rem;
-    color: var(--color-forest-green);
+    color: var(--color-primary);
     margin-bottom: 24px;
     transition: var(--transition);
   }
 
   .program-card:hover .program-icon {
-    background-color: var(--color-forest-green);
-    color: var(--color-gold);
+    background-color: var(--color-primary);
+    color: var(--color-accent);
+    transform: rotateY(180deg);
   }
 
   .program-card h3 {
@@ -504,31 +566,84 @@
   }
 
   .program-link {
-    color: var(--color-forest-green);
+    color: var(--color-primary);
     font-weight: 600;
     font-size: 0.9rem;
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    cursor: pointer;
   }
-  .program-link:hover { color: var(--color-gold); gap: 12px; }
+  .program-card:hover .program-link { color: var(--color-accent); gap: 12px; }
 
   /* =========================================
-     7. CTA SECTION
+     8. STATS / IMPACT SECTION
+     ========================================= */
+  .stats-section {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    padding: 80px 0;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .stats-section::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: url('https://www.transparenttextures.com/patterns/cubes.png');
+    opacity: 0.05;
+  }
+
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 32px;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+  }
+
+  .stat-item h3 {
+    font-size: 3.5rem;
+    color: var(--color-accent);
+    margin-bottom: 8px;
+    font-family: var(--font-heading);
+  }
+
+  .stat-item p {
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.7);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 500;
+  }
+
+  /* =========================================
+     9. TESTIMONIALS SECTION
+     ========================================= */
+  .testimonial-card {
+    background: var(--color-white);
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    border-top: 4px solid var(--color-accent);
+  }
+
+  /* =========================================
+     10. CTA SECTION
      ========================================= */
   .cta-section {
     background: 
-      linear-gradient(rgba(30, 58, 47, 0.92), rgba(30, 58, 47, 0.92)),
+      linear-gradient(rgba(15, 23, 42, 0.92), rgba(15, 23, 42, 0.92)),
       url('https://images.unsplash.com/photo-1507692049790-de58293a4697?q=80&w=2070&auto=format&fit=crop') center center / cover no-repeat;
     padding: 120px 0;
     text-align: center;
-    color: var(--color-ivory);
+    color: var(--color-white);
   }
 
   .cta-section h2 {
     font-size: 3.5rem;
-    color: var(--color-ivory);
+    color: var(--color-white);
     margin-bottom: 24px;
   }
 
@@ -536,37 +651,136 @@
     font-size: 1.2rem;
     max-width: 600px;
     margin: 0 auto 40px;
-    color: rgba(253, 252, 248, 0.8);
+    color: rgba(255, 255, 255, 0.8);
     font-weight: 300;
   }
 
   /* =========================================
-     8. FOOTER
+     11. EXPANDED FOOTER
      ========================================= */
   .footer {
-    background-color: var(--color-charcoal);
-    color: rgba(253, 252, 248, 0.7);
-    padding: 60px 0 0;
+    background-color: #0B1120; /* Deepest Navy */
+    color: rgba(255, 255, 255, 0.7);
+    padding: 80px 0 0;
+  }
+
+  .footer-verse-box {
+    background: linear-gradient(135deg, rgba(217, 119, 6, 0.1), rgba(217, 119, 6, 0.02));
+    border-left: 4px solid var(--color-accent);
+    padding: 32px;
+    border-radius: 0 8px 8px 0;
+    margin-bottom: 60px;
     text-align: center;
   }
 
-  .footer-verse {
+  .footer-verse-text {
     font-family: var(--font-heading);
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     font-style: italic;
-    color: var(--color-gold);
+    color: var(--color-white);
+    margin-bottom: 12px;
+    line-height: 1.4;
+  }
+
+  .footer-verse-ref {
+    color: var(--color-accent);
+    font-weight: 700;
+    font-size: 1rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1.2fr;
+    gap: 48px;
+    margin-bottom: 60px;
+  }
+
+  .footer-col h4 {
+    color: var(--color-white);
+    font-size: 1.2rem;
     margin-bottom: 24px;
+    position: relative;
+    display: inline-block;
+  }
+
+  .footer-col h4::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 40px;
+    height: 3px;
+    background-color: var(--color-accent);
+    border-radius: 2px;
+  }
+
+  .footer-col p {
+    line-height: 1.8;
+    margin-bottom: 16px;
+    font-size: 0.95rem;
+  }
+
+  .footer-links {
+    list-style: none;
+  }
+
+  .footer-links li {
+    margin-bottom: 14px;
+  }
+
+  .footer-links a {
+    color: rgba(255, 255, 255, 0.7);
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.95rem;
+  }
+
+  .footer-links a:hover {
+    color: var(--color-accent);
+    transform: translateX(6px);
+  }
+
+  .social-links {
+    display: flex;
+    gap: 16px;
+    margin-top: 24px;
+  }
+
+  .social-link {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-white);
+    font-size: 1.2rem;
+    transition: var(--transition);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .social-link:hover {
+    background-color: var(--color-accent);
+    border-color: var(--color-accent);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(217, 119, 6, 0.3);
   }
 
   .footer-bottom {
     border-top: 1px solid rgba(255, 255, 255, 0.08);
-    padding: 24px 0;
-    font-size: 0.85rem;
-    color: rgba(253, 252, 248, 0.4);
+    padding: 28px 0;
+    text-align: center;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.4);
   }
 
   /* =========================================
-     9. MODAL
+     12. MODAL
      ========================================= */
   .modal-overlay {
     position: fixed;
@@ -574,8 +788,8 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(26, 26, 29, 0.8);
-    backdrop-filter: blur(5px);
+    background-color: rgba(15, 23, 42, 0.85);
+    backdrop-filter: blur(8px);
     z-index: 2000;
     display: flex;
     align-items: center;
@@ -592,14 +806,14 @@
   }
 
   .modal-content {
-    background-color: var(--color-ivory);
+    background-color: var(--color-white);
     width: 100%;
     max-width: 550px;
-    border-radius: 4px;
+    border-radius: 8px;
     padding: 40px;
     position: relative;
     transform: translateY(30px);
-    transition: transform 0.4s ease;
+    transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
     box-shadow: 0 25px 50px rgba(0,0,0,0.25);
   }
 
@@ -611,25 +825,31 @@
     position: absolute;
     top: 20px;
     right: 20px;
-    background: none;
+    background: var(--color-bg-alt);
     border: none;
-    font-size: 1.5rem;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    font-size: 1.2rem;
     color: var(--color-text-light);
     cursor: pointer;
     transition: var(--transition);
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
-  .modal-close:hover { color: var(--color-charcoal); transform: rotate(90deg); }
+  .modal-close:hover { background: var(--color-accent); color: var(--color-white); transform: rotate(90deg); }
 
   .modal-icon {
-    width: 60px;
-    height: 60px;
-    background-color: var(--color-ivory-dark);
+    width: 64px;
+    height: 64px;
+    background-color: var(--color-bg-alt);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 1.5rem;
-    color: var(--color-forest-green);
+    color: var(--color-primary);
     margin-bottom: 24px;
   }
 
@@ -645,10 +865,10 @@
   }
 
   .modal-content .detail-box {
-    background-color: var(--color-ivory-dark);
+    background-color: var(--color-bg-alt);
     padding: 20px;
-    border-radius: 4px;
-    border-left: 3px solid var(--color-gold);
+    border-radius: 8px;
+    border-left: 4px solid var(--color-accent);
     margin-bottom: 24px;
   }
 
@@ -658,38 +878,76 @@
     color: var(--color-text);
   }
 
-  /* Join Form in Modal */
   .form-group { margin-bottom: 20px; }
   .form-group label {
     display: block;
     font-size: 0.85rem;
     font-weight: 600;
     margin-bottom: 8px;
-    color: var(--color-charcoal);
+    color: var(--color-primary);
   }
   .form-group input {
     width: 100%;
     padding: 14px;
     border: 1px solid rgba(0,0,0,0.1);
-    border-radius: 2px;
+    border-radius: 4px;
     font-family: var(--font-body);
     font-size: 1rem;
     transition: var(--transition);
+    background-color: var(--color-bg);
   }
   .form-group input:focus {
     outline: none;
-    border-color: var(--color-gold);
-    box-shadow: 0 0 0 3px rgba(197, 160, 89, 0.1);
+    border-color: var(--color-accent);
+    box-shadow: 0 0 0 3px rgba(217, 119, 6, 0.1);
   }
 
   /* =========================================
-     10. RESPONSIVE DESIGN
+     13. BACK TO TOP BUTTON
+     ========================================= */
+  .back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background-color: var(--color-accent);
+    color: var(--color-white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: var(--transition);
+    z-index: 999;
+    border: none;
+    box-shadow: 0 4px 15px rgba(217, 119, 6, 0.4);
+  }
+
+  .back-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .back-to-top:hover {
+    transform: translateY(-4px);
+    background-color: var(--color-accent-light);
+  }
+
+  /* =========================================
+     14. RESPONSIVE DESIGN
      ========================================= */
   @media (max-width: 1024px) {
     .hero h1 { font-size: 3.5rem; }
     .section-title { font-size: 2.5rem; }
     .mission-grid { gap: 40px; }
     .programs-grid { grid-template-columns: repeat(2, 1fr); }
+    .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 40px; }
+    .footer-grid { grid-template-columns: 1fr 1fr; }
+    .splash-verse { font-size: 2rem; }
   }
 
   @media (max-width: 768px) {
@@ -702,16 +960,16 @@
       width: 80%;
       max-width: 320px;
       height: 100vh;
-      background-color: var(--color-charcoal);
+      background-color: var(--color-primary);
       flex-direction: column;
       justify-content: center;
       gap: 24px;
       transition: right 0.4s ease;
-      box-shadow: -10px 0 30px rgba(0,0,0,0.2);
+      box-shadow: -10px 0 30px rgba(0,0,0,0.3);
     }
     
     .nav-links.active { right: 0; }
-    .nav-links a { color: var(--color-ivory) !important; font-size: 1.1rem; }
+    .nav-links a { color: var(--color-white) !important; font-size: 1.1rem; }
     
     .hero h1 { font-size: 2.8rem; }
     .hero-verse { font-size: 1.1rem; }
@@ -721,11 +979,19 @@
     .mission-image img { height: 350px; }
     
     .programs-grid { grid-template-columns: 1fr; }
+    .stats-grid { grid-template-columns: 1fr; }
     
     .cta-section h2 { font-size: 2.4rem; }
     .section-padding { padding: 70px 0; }
-    
     .hero-wave svg { height: 40px; }
+
+    .splash-section { padding: 100px 0; background-attachment: scroll; }
+    .splash-verse { font-size: 1.6rem; }
+    
+    .footer-grid { grid-template-columns: 1fr; gap: 40px; text-align: center; }
+    .footer-col h4::after { left: 50%; transform: translateX(-50%); }
+    .footer-links a { justify-content: center; }
+    .social-links { justify-content: center; }
   }
 
   @media (max-width: 480px) {
@@ -779,12 +1045,21 @@
   
   <div class="hero-wave">
     <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
-      <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" fill="#FDFCF8" opacity=".8"></path>
-      <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" fill="#FDFCF8" opacity=".5"></path>
-      <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" fill="#FDFCF8"></path>
+      <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" fill="#F8FAFC" opacity=".8"></path>
+      <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" fill="#F8FAFC" opacity=".5"></path>
+      <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" fill="#F8FAFC"></path>
     </svg>
   </div>
 </header>
+
+<!-- ========== SPLASH VERSE 1 ========== -->
+<section class="splash-section" style="background-image: url('https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?q=80&w=2070&auto=format&fit=crop');">
+  <div class="splash-overlay"></div>
+  <div class="splash-content reveal">
+    <div class="splash-verse">"The Lord is my strength and my shield; my heart trusts in him, and he helps me. My heart leaps for joy, and with my song I praise him."</div>
+    <div class="splash-reference">— Psalm 28:7</div>
+  </div>
+</section>
 
 <!-- ========== MISSION SECTION ========== -->
 <section class="section-padding" id="mission">
@@ -815,7 +1090,7 @@
 </section>
 
 <!-- ========== PROGRAMS SECTION ========== -->
-<section class="section-padding bg-ivory-dark" id="programs">
+<section class="section-padding bg-alt" id="programs">
   <div class="container">
     <div class="text-center reveal">
       <span class="section-label">Get Involved</span>
@@ -827,7 +1102,6 @@
     </div>
 
     <div class="programs-grid">
-      <!-- Card 1 -->
       <div class="program-card reveal" onclick="openProgramModal('MB')">
         <div class="program-icon"><i class="fa-solid fa-book-bible"></i></div>
         <h3>Men's Bible Study</h3>
@@ -835,7 +1109,6 @@
         <span class="program-link">Learn More <i class="fa-solid fa-arrow-right"></i></span>
       </div>
 
-      <!-- Card 2 -->
       <div class="program-card reveal" onclick="openProgramModal('Prayer')">
         <div class="program-icon"><i class="fa-solid fa-hands-praying"></i></div>
         <h3>Men's Prayer Group</h3>
@@ -843,7 +1116,6 @@
         <span class="program-link">Learn More <i class="fa-solid fa-arrow-right"></i></span>
       </div>
 
-      <!-- Card 3 -->
       <div class="program-card reveal" onclick="openProgramModal('Mentorship')">
         <div class="program-icon"><i class="fa-solid fa-user-group"></i></div>
         <h3>Fatherhood & Mentorship</h3>
@@ -851,7 +1123,6 @@
         <span class="program-link">Learn More <i class="fa-solid fa-arrow-right"></i></span>
       </div>
 
-      <!-- Card 4 -->
       <div class="program-card reveal" onclick="openProgramModal('Fellowship')">
         <div class="program-icon"><i class="fa-solid fa-mug-hot"></i></div>
         <h3>Men's Fellowship</h3>
@@ -859,7 +1130,6 @@
         <span class="program-link">Learn More <i class="fa-solid fa-arrow-right"></i></span>
       </div>
 
-      <!-- Card 5 -->
       <div class="program-card reveal" onclick="openProgramModal('Outreach')">
         <div class="program-icon"><i class="fa-solid fa-hand-holding-heart"></i></div>
         <h3>Community Service</h3>
@@ -867,7 +1137,6 @@
         <span class="program-link">Learn More <i class="fa-solid fa-arrow-right"></i></span>
       </div>
 
-      <!-- Card 6 -->
       <div class="program-card reveal" onclick="openProgramModal('Leadership')">
         <div class="program-icon"><i class="fa-solid fa-chess-king"></i></div>
         <h3>Leadership Training</h3>
@@ -875,6 +1144,79 @@
         <span class="program-link">Learn More <i class="fa-solid fa-arrow-right"></i></span>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- ========== SPLASH VERSE 2 ========== -->
+<section class="splash-section" style="background-image: url('https://images.unsplash.com/photo-1529156069898-49953e39b3ac?q=80&w=2070&auto=format&fit=crop');">
+  <div class="splash-overlay"></div>
+  <div class="splash-content reveal">
+    <div class="splash-verse">"As iron sharpens iron, so one person sharpens another."</div>
+    <div class="splash-reference">— Proverbs 27:17</div>
+  </div>
+</section>
+
+<!-- ========== IMPACT / STATS SECTION ========== -->
+<section class="stats-section">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-item reveal">
+        <h3 class="stat-number" data-target="150" data-suffix="+">0</h3>
+        <p>Active Members</p>
+      </div>
+      <div class="stat-item reveal">
+        <h3 class="stat-number" data-target="12" data-suffix="">0</h3>
+        <p>Years of Service</p>
+      </div>
+      <div class="stat-item reveal">
+        <h3 class="stat-number" data-target="25" data-suffix="+">0</h3>
+        <p>Community Projects</p>
+      </div>
+      <div class="stat-item reveal">
+        <h3 class="stat-number" data-target="40" data-suffix="+">0</h3>
+        <p>Mentorship Pairs</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== TESTIMONIALS SECTION ========== -->
+<section class="section-padding" id="testimonials">
+  <div class="container">
+    <div class="text-center reveal">
+      <span class="section-label">Testimonials</span>
+      <h2 class="section-title">Lives Transformed</h2>
+      <div class="divider"></div>
+    </div>
+    <div class="mission-grid">
+      <div class="mission-image reveal">
+        <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?q=80&w=1000&auto=format&fit=crop" alt="Men smiling and talking in brotherhood">
+      </div>
+      <div class="mission-text reveal">
+        <div class="testimonial-card">
+          <i class="fa-solid fa-quote-left" style="font-size: 2rem; color: var(--color-accent); margin-bottom: 16px;"></i>
+          <p style="font-size: 1.15rem; font-style: italic; color: var(--color-text); margin-bottom: 24px; line-height: 1.8;">
+            "Joining the Men's Ministry gave me the accountability and brotherhood I didn't know I needed. The mentorship program helped me become a better father and husband. I am forever grateful for this community of men who pray together and grow together."
+          </p>
+          <div style="display: flex; align-items: center; gap: 16px;">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=100&auto=format&fit=crop" alt="David M." style="width: 56px; height: 56px; border-radius: 50%; object-fit: cover; border: 2px solid var(--color-accent);">
+            <div>
+              <h4 style="margin: 0; font-size: 1.1rem; color: var(--color-primary);">David M.</h4>
+              <p style="margin: 0; font-size: 0.9rem; color: var(--color-text-light);">Member since 2021</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== SPLASH VERSE 3 ========== -->
+<section class="splash-section" style="background-image: url('https://images.unsplash.com/photo-1507692049790-de58293a4697?q=80&w=2070&auto=format&fit=crop');">
+  <div class="splash-overlay"></div>
+  <div class="splash-content reveal">
+    <div class="splash-verse">"Don't let anyone look down on you because you are young, but set an example for the believers in speech, in conduct, in love, in faith and in purity."</div>
+    <div class="splash-reference">— 1 Timothy 4:12</div>
   </div>
 </section>
 
@@ -892,15 +1234,77 @@
   </div>
 </section>
 
-<!-- ========== FOOTER ========== -->
+<!-- ========== EXPANDED FOOTER ========== -->
 <footer class="footer">
   <div class="container">
-    <div class="footer-verse">"Be strong and courageous." — Joshua 1:9</div>
+    
+    <div class="footer-verse-box reveal">
+      <div class="footer-verse-text">"Have I not commanded you? Be strong and courageous. Do not be afraid; do not be discouraged, for the Lord your God will be with you wherever you go."</div>
+      <div class="footer-verse-ref">— Joshua 1:9</div>
+    </div>
+
+    <div class="footer-grid">
+      <!-- Column 1: About & Social -->
+      <div class="footer-col reveal">
+        <a href="index.html" class="nav-brand" style="margin-bottom: 20px; display: inline-flex;">
+          <span class="main-title" style="color: var(--color-white);">Men's Ministry</span>
+        </a>
+        <p>Building godly men who lead with integrity in their homes, churches, and communities at Mfangano Central SDA Church. Stand firm in faith.</p>
+        <div class="social-links">
+          <a href="#" class="social-link" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" class="social-link" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" class="social-link" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          <a href="#" class="social-link" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+          <a href="#" class="social-link" aria-label="X (Twitter)"><i class="fa-brands fa-x-twitter"></i></a>
+        </div>
+      </div>
+
+      <!-- Column 2: Quick Links -->
+      <div class="footer-col reveal">
+        <h4>Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="index.html"><i class="fa-solid fa-chevron-right"></i> Home</a></li>
+          <li><a href="about.html"><i class="fa-solid fa-chevron-right"></i> About Us</a></li>
+          <li><a href="events.html"><i class="fa-solid fa-chevron-right"></i> Upcoming Events</a></li>
+          <li><a href="sermons.html"><i class="fa-solid fa-chevron-right"></i> Sermons</a></li>
+          <li><a href="give.html"><i class="fa-solid fa-chevron-right"></i> Give / Tithe</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 3: Other Ministries -->
+      <div class="footer-col reveal">
+        <h4>Our Ministries</h4>
+        <ul class="footer-links">
+          <li><a href="youth.html"><i class="fa-solid fa-chevron-right"></i> Youth Ministry</a></li>
+          <li><a href="children.html"><i class="fa-solid fa-chevron-right"></i> Children's Ministry</a></li>
+          <li><a href="women.html"><i class="fa-solid fa-chevron-right"></i> Women's Ministry</a></li>
+          <li><a href="pathfinder.html"><i class="fa-solid fa-chevron-right"></i> Pathfinders</a></li>
+          <li><a href="health.html"><i class="fa-solid fa-chevron-right"></i> Health Ministry</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 4: Contact -->
+      <div class="footer-col reveal">
+        <h4>Contact Us</h4>
+        <ul class="footer-links">
+          <li><a href="#"><i class="fa-solid fa-location-dot"></i> Mfangano Central SDA Church, Kenya</a></li>
+          <li><a href="tel:+254700000000"><i class="fa-solid fa-phone"></i> +254 700 000 000</a></li>
+          <li><a href="mailto:men@mfanganocentral.org"><i class="fa-solid fa-envelope"></i> men@mfanganocentral.org</a></li>
+          <li><a href="#"><i class="fa-solid fa-clock"></i> Sabbath: 9:00 AM - 1:00 PM</a></li>
+        </ul>
+      </div>
+    </div>
+
     <div class="footer-bottom">
-      <p>&copy; 2026 Mfangano Central SDA Church - Men's Ministry. All rights reserved.</p>
+      <p>&copy; 2026 Mfangano Central SDA Church - Men's Ministry. All rights reserved. | Built with purpose and faith.</p>
     </div>
   </div>
 </footer>
+
+<!-- ========== BACK TO TOP BUTTON ========== -->
+<button class="back-to-top" id="backToTop" aria-label="Back to top">
+  <i class="fa-solid fa-arrow-up"></i>
+</button>
 
 <!-- ========== MODAL OVERLAY ========== -->
 <div class="modal-overlay" id="modalOverlay">
@@ -952,7 +1356,54 @@
 
   revealElements.forEach(el => revealObserver.observe(el));
 
-  // 4. Modal Logic
+  // 4. Animated Stats Counter
+  const statNumbers = document.querySelectorAll('.stat-number');
+  let hasAnimatedStats = false;
+  
+  const statsObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting && !hasAnimatedStats) {
+        hasAnimatedStats = true;
+        statNumbers.forEach(stat => {
+          const target = parseInt(stat.getAttribute('data-target'));
+          const suffix = stat.getAttribute('data-suffix') || '';
+          let count = 0;
+          const increment = target / 60;
+          
+          const updateCount = () => {
+            if (count < target) {
+              count += increment;
+              stat.innerText = Math.ceil(count) + suffix;
+              setTimeout(updateCount, 25);
+            } else {
+              stat.innerText = target + suffix;
+            }
+          };
+          updateCount();
+        });
+      }
+    });
+  }, { threshold: 0.5 });
+
+  if (document.querySelector('.stats-section')) {
+    statsObserver.observe(document.querySelector('.stats-section'));
+  }
+
+  // 5. Back to Top Button
+  const backToTop = document.getElementById('backToTop');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 600) {
+      backToTop.classList.add('visible');
+    } else {
+      backToTop.classList.remove('visible');
+    }
+  });
+
+  backToTop.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
+  // 6. Modal Logic
   const modalOverlay = document.getElementById('modalOverlay');
   const modalBody = document.getElementById('modalBody');
 
@@ -960,7 +1411,7 @@
     'MB': {
       icon: 'fa-book-bible',
       title: "Men's Bible Study",
-      description: "Deep dive into God's Word. We study books of the Bible and discuss practical Christian living in a supportive environment.",
+      description: "Deep dive into God's Word. We study books of the Bible and discuss practical Christian living in a supportive, brotherhood environment.",
       detail: "Meets every Thursday at 6:00 PM. All men are welcome, regardless of where you are in your faith journey."
     },
     'Prayer': {
@@ -1004,12 +1455,12 @@
       <h3>${data.title}</h3>
       <p>${data.description}</p>
       <div class="detail-box">
-        <p><i class="fa-solid fa-circle-info" style="color: var(--color-gold); margin-right: 8px;"></i> ${data.detail}</p>
+        <p><i class="fa-solid fa-circle-info" style="color: var(--color-accent); margin-right: 8px;"></i> ${data.detail}</p>
       </div>
       <button class="btn btn-primary" style="width: 100%;" onclick="closeModal(); setTimeout(openJoinModal, 300);">Join This Program</button>
     `;
     modalOverlay.classList.add('active');
-    document.body.style.overflow = 'hidden'; // Prevent background scrolling
+    document.body.style.overflow = 'hidden';
   }
 
   function openJoinModal() {
@@ -1035,17 +1486,15 @@
 
   function closeModal() {
     modalOverlay.classList.remove('active');
-    document.body.style.overflow = ''; // Restore scrolling
+    document.body.style.overflow = '';
   }
 
-  // Close modal when clicking outside the content
   modalOverlay.addEventListener('click', (e) => {
     if (e.target === modalOverlay) {
       closeModal();
     }
   });
 
-  // Close modal on Escape key
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && modalOverlay.classList.contains('active')) {
       closeModal();
@@ -1057,7 +1506,7 @@
     const name = document.getElementById('joinName').value;
     
     modalBody.innerHTML = `
-      <div class="modal-icon" style="background-color: var(--color-forest-green); color: var(--color-gold);">
+      <div class="modal-icon" style="background-color: var(--color-primary); color: var(--color-accent);">
         <i class="fa-solid fa-check"></i>
       </div>
       <h3>Welcome, ${name}!</h3>
